@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="123"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_item_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_name"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_item_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_height"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_item_creattime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_weight"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_item_updatetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_creattime"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_item_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_updatetime"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:padding="5dp"
+        android:singleLine="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal" />
+
+</RelativeLayout>

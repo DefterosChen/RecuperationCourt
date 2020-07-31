@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+        android:id="@+id/menu_workordernum"
+        style="@style/InfoItem.Account"
+        app:sLeftTextString="@string/kyy_visitorder_workorderid" />
+
+
+    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+        android:id="@+id/menu_servicename"
+        style="@style/InfoItem.Account"
+        app:sLeftTextString="@string/kyy_visitorder_servicename" />
+
+
+    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+        android:id="@+id/menu_creatman"
+        style="@style/InfoItem.Account"
+        app:sLeftTextString="@string/kyy_visitorder_creatman" />
+
+    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+        android:id="@+id/menu_creattime"
+        style="@style/InfoItem.Account"
+        app:sLeftTextString="@string/kyy_visitorder_creattime" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_item_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="@string/kyy_workorder_des"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/et_item_des"
+        style="@style/EditText.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:singleLine="false"
+        android:gravity="left"
+        android:padding="5dp"
+        />
+
+</LinearLayout>

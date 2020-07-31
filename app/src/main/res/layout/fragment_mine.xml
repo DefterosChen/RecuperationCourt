@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".common.view.fragment.MineFragment"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <com.hjq.bar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backButton="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/icon_padding">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/icon_normal_size"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/icon_small_size"
+                android:id="@+id/iv_setting"
+                android:gravity="center_vertical"
+                android:src="@drawable/icon_kky_gray_setting"
+                app:layout_constraintRight_toLeftOf="@id/iv_system_messages" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_system_messages"
+                android:layout_width="@dimen/icon_normal_size"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/icon_gray_bubbleframe"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.hjq.bar.TitleBar>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout style="@style/PullDownStyle">
+
+        <androidx.core.widget.NestedScrollView style="@style/ScrollViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_myinfo"
+                    android:layout_height="60dp"
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="@string/kky_unlogin"
+                    app:sLeftViewMarginLeft="10dp"
+                    app:sLeftIconRes="@drawable/icon_blue_default_avatar"
+                    app:sLeftIconHeight="38dp"
+                    app:sLeftIconWidth="38dp"
+                    app:sLeftIconMarginLeft="5dp"
+                    app:sRightTextString="@string/kky_edit_personal_info"
+                    app:sRightTextSize="@dimen/font_small"
+                    >
+
+<!--                    <com.xuexiang.xui.widget.imageview.RadiusImageView-->
+<!--                        android:id="@+id/riv_head_pic"-->
+<!--                        style="@style/RadiusImageView.Circle"-->
+<!--                        android:layout_width="38dp"-->
+<!--                        android:layout_height="38dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_toEndOf="@id/sLeftImgId"-->
+<!--                        app:srcCompat="@drawable/icon_blue_default_avatar" />-->
+
+                </com.xuexiang.xui.widget.textview.supertextview.SuperTextView>
+
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_mydevice"
+                    style="@style/InfoItem.Account"
+                    android:layout_marginTop="20dp"
+                    app:sLeftIconHeight="20dp"
+                    app:sLeftIconWidth="20dp"
+                    app:sLeftViewMarginLeft="5dp"
+                    app:sLeftIconRes="@drawable/icon_kky_blue_profile"
+                    app:sLeftTextString="@string/kky_my_device" />
+
+
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_mycredit"
+                    style="@style/InfoItem.Account"
+                    android:layout_marginTop="20dp"
+                    app:sLeftIconHeight="20dp"
+                    app:sLeftIconWidth="20dp"
+                    app:sLeftViewMarginLeft="5dp"
+                    app:sLeftIconRes="@drawable/icon_kky_blue_mycredit"
+                    app:sLeftTextString="@string/kky_my_credit" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_healthrecord"
+                    style="@style/InfoItem.Account"
+                    android:visibility="gone"
+                    app:sLeftIconHeight="20dp"
+                    app:sLeftIconWidth="20dp"
+                    app:sLeftViewMarginLeft="5dp"
+                    app:sLeftIconRes="@drawable/icon_kky_blue_profile"
+                    app:sLeftTextString="@string/kky_health_record" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_myservice"
+                    style="@style/InfoItem.Account"
+                    app:sLeftIconHeight="20dp"
+                    app:sLeftIconWidth="20dp"
+                    app:sLeftViewMarginLeft="5dp"
+                    app:sLeftIconRes="@drawable/icon_kky_blue_myservice"
+                    app:sLeftTextString="@string/kky_my_service" />
+
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_mycourse"
+                    style="@style/InfoItem.Account"
+                    app:sLeftIconHeight="20dp"
+                    app:sLeftIconWidth="20dp"
+                    app:sLeftViewMarginLeft="5dp"
+                    app:sLeftIconRes="@drawable/icon_kky_blue_lesson"
+                    app:sLeftTextString="@string/kky_my_course" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_message"
+                    style="@style/InfoItem.Account"
+                    app:sLeftIconHeight="20dp"
+                    app:sLeftIconWidth="20dp"
+                    app:sLeftViewMarginLeft="5dp"
+                    app:sLeftIconRes="@drawable/icon_kky_blue_mymessage"
+                    app:sLeftTextString="@string/kky_my_message" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_contactus"
+                    style="@style/InfoItem.Account"
+                    android:layout_marginTop="20dp"
+                    app:sLeftIconHeight="20dp"
+                    app:sLeftIconWidth="20dp"
+                    app:sLeftViewMarginLeft="5dp"
+                    app:sLeftIconRes="@drawable/icon_kky_blue_contactus"
+                    app:sLeftTextString="@string/kky_contact_us" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_companyprofile"
+                    style="@style/InfoItem.Account"
+                    app:sLeftIconHeight="20dp"
+                    app:sLeftIconWidth="20dp"
+                    app:sLeftViewMarginLeft="5dp"
+                    app:sLeftIconRes="@drawable/icon_kky_blue_company"
+                    app:sDividerLineType="none"
+                    app:sLeftTextString="@string/kky_company_profile" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

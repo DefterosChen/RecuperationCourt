@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".common.view.fragment.market.ShopFragment">
+
+<!--    <com.kky.healthcaregardens.common.widget.scrollview.StickyScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        >-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:descendantFocusability="blocksDescendants">-->
+
+
+<!--            <com.kky.healthcaregardens.common.helper.xui.widget.banner.RadiusImageBanner-->
+<!--                android:id="@+id/rib_simple_usage"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="180dp"-->
+<!--                app:bb_barPaddingBottom="10dp"-->
+<!--                app:bb_scale="0.4317" />-->
+
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/tv_my_device"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:text="@string/kky_my_device"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/font_normal"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/white"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingBottom="10dp">-->
+
+
+<!--                <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--                    android:id="@+id/rd_my_device_1st"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:button="@null"-->
+<!--                    android:drawableTop="@drawable/icon_kky_weight"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:text="@string/kky_mydevice_device1"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_small" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--                    android:id="@+id/rd_my_device_2nd"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:button="@null"-->
+<!--                    android:drawableTop="@drawable/icon_kky_heart"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:text="@string/kky_mydevice_device2"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_small" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--                    android:id="@+id/rd_my_device_3rd"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:button="@null"-->
+<!--                    android:drawableTop="@drawable/icon_kky_sleep"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:text="@string/kky_mydevice_device3"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_small" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--                    android:id="@+id/rd_my_device_more"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:button="@null"-->
+<!--                    android:drawableTop="@drawable/icon_kky_more"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:text="@string/kky_mydevice_more"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_small" />-->
+
+
+<!--            </LinearLayout>-->
+
+
+
+<!--            <com.kky.healthcaregardens.common.helper.lunzi.layout.RatioFrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/xui_btn_blue_normal_color"-->
+<!--                app:sizeRatio="4">-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/iv_shop_advert"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:src="@drawable/icon_blue_default_avatar" />-->
+
+<!--            </com.kky.healthcaregardens.common.helper.lunzi.layout.RatioFrameLayout>-->
+
+
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/tv_my_service_health"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:text="@string/kky_my_health_service"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/font_normal"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <com.kky.healthcaregardens.common.widget.ItemInfoLinearLayout-->
+<!--                android:id="@+id/iill_servicehealth"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:descendantFocusability="blocksDescendants"-->
+<!--                android:background="@color/white" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/tv_my_serviceassess"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:text="@string/kky_my_health_assess"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/font_normal"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <com.kky.healthcaregardens.common.widget.ItemInfoLinearLayout-->
+<!--                android:id="@+id/iill_serviceassess"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/white" />-->
+
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/tv_my_servicecourse"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:text="@string/kky_my_health_course"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/font_normal"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <com.kky.healthcaregardens.common.widget.ItemInfoLinearLayout-->
+<!--                android:id="@+id/iill_servicecourse"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/white" />-->
+
+
+<!--            <com.hjq.bar.TitleBar-->
+<!--                android:id="@+id/tt_my_recommendtoday"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:backButton="false">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="@dimen/icon_padding">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/linearlayout_recommendtoday"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                        app:layout_constraintRight_toRightOf="parent">-->
+
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:id="@+id/tv_my_recommendtoday"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:background="@color/white"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="@string/kky_recommend_today"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/font_normal" />-->
+<!--                    </LinearLayout>-->
+
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginRight="2dp"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="@string/kky_change"-->
+<!--                        android:textColor="@color/icon_gray"-->
+<!--                        android:textSize="@dimen/font_small"-->
+<!--                        app:layout_constraintRight_toLeftOf="@id/iv_change" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/iv_change"-->
+<!--                        android:layout_width="@dimen/icon_normal_size"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:src="@drawable/icon_gray_change"-->
+<!--                        app:layout_constraintRight_toRightOf="parent" />-->
+
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            </com.hjq.bar.TitleBar>-->
+
+<!--            <com.kky.healthcaregardens.common.widget.ItemInfoLinearLayout-->
+<!--                android:id="@+id/iill_recommendtoday"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/white" />-->
+
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/tv_my_medicalservice"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:text="@string/kky_my_medical_service"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/font_normal"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:background="@color/white"-->
+<!--                android:padding="10dp">-->
+
+<!--                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView-->
+<!--                    android:id="@+id/stv_medicalservice1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                    app:layout_constraintRight_toRightOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:sLeftBottomTextColor="@color/icon_gray"-->
+<!--                    app:sLeftBottomTextSize="@dimen/font_small"-->
+<!--                    app:sLeftBottomTextString="@string/kky_medicalservice_detail_1"-->
+<!--                    app:sLeftTopTextIsBold="true"-->
+<!--                    app:sLeftTopTextSize="@dimen/font_normal"-->
+<!--                    app:sLeftTopTextString="@string/kky_medicalservice_1"-->
+<!--                    app:sLeftViewGravity="left_center"-->
+<!--                    app:sRightIconHeight="20dp"-->
+<!--                    app:sRightIconRes="@drawable/icon_kyy_arrow_c_right"-->
+<!--                    app:sRightIconWidth="20dp" />-->
+
+<!--                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView-->
+<!--                    android:id="@+id/stv_medicalservice2"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    app:layout_constraintWidth_percent="0.5"-->
+<!--                    app:layout_constraintDimensionRatio="W,1:2"-->
+<!--                    android:padding="5dp"-->
+<!--                    app:layout_constraintHorizontal_weight="1"-->
+<!--                    app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                    app:layout_constraintRight_toLeftOf="@+id/stv_medicalservice3"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/stv_medicalservice1"-->
+<!--                    app:sRightBottomTextColor="@color/icon_gray"-->
+<!--                    app:sRightBottomTextSize="@dimen/font_small"-->
+<!--                    app:sRightBottomTextString="@string/kky_medicalservice_detail_2"-->
+<!--                    app:sRightIconHeight="30dp"-->
+<!--                    app:sRightIconRes="@drawable/icon_kky_heart"-->
+<!--                    app:sRightIconWidth="30dp"-->
+<!--                    app:sRightTopTextIsBold="true"-->
+<!--                    app:sRightTopTextSize="@dimen/font_normal"-->
+<!--                    app:sRightTopTextString="@string/kky_medicalservice_2"-->
+<!--                    app:sRightViewGravity="left_center" />-->
+
+<!--                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView-->
+<!--                    android:id="@+id/stv_medicalservice3"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    app:layout_constraintWidth_percent="0.5"-->
+<!--                    app:layout_constraintDimensionRatio="W,1:2"-->
+<!--                    android:padding="5dp"-->
+<!--                    app:layout_constraintHorizontal_weight="1"-->
+<!--                    app:layout_constraintLeft_toRightOf="@+id/stv_medicalservice2"-->
+<!--                    app:layout_constraintRight_toRightOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/stv_medicalservice1"-->
+<!--                    app:sRightBottomTextColor="@color/icon_gray"-->
+<!--                    app:sRightBottomTextSize="@dimen/font_small"-->
+<!--                    app:sRightBottomTextString="@string/kky_medicalservice_detail_3"-->
+<!--                    app:sRightIconHeight="30dp"-->
+<!--                    app:sRightIconRes="@drawable/icon_kky_weight"-->
+<!--                    app:sRightIconWidth="30dp"-->
+<!--                    app:sRightTopTextIsBold="true"-->
+<!--                    app:sRightTopTextSize="@dimen/font_normal"-->
+<!--                    app:sRightTopTextString="@string/kky_medicalservice_3"-->
+<!--                    app:sRightViewGravity="left_center" />-->
+
+<!--                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView-->
+<!--                    android:id="@+id/stv_medicalservice4"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    app:layout_constraintWidth_percent="0.5"-->
+<!--                    app:layout_constraintDimensionRatio="W,1:2"-->
+<!--                    android:padding="5dp"-->
+<!--                    app:layout_constraintHorizontal_weight="1"-->
+<!--                    app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                    app:layout_constraintRight_toLeftOf="@+id/stv_medicalservice5"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/stv_medicalservice2"-->
+<!--                    app:sRightBottomTextColor="@color/icon_gray"-->
+<!--                    app:sRightBottomTextSize="@dimen/font_small"-->
+<!--                    app:sRightBottomTextString="@string/kky_medicalservice_detail_4"-->
+<!--                    app:sRightIconHeight="30dp"-->
+<!--                    app:sRightIconRes="@drawable/icon_kky_more"-->
+<!--                    app:sRightIconWidth="30dp"-->
+<!--                    app:sRightTopTextIsBold="true"-->
+<!--                    app:sRightTopTextSize="@dimen/font_normal"-->
+<!--                    app:sRightTopTextString="@string/kky_medicalservice_4"-->
+<!--                    app:sRightViewGravity="left_center" />-->
+
+<!--                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView-->
+<!--                    android:id="@+id/stv_medicalservice5"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    app:layout_constraintWidth_percent="0.5"-->
+<!--                    app:layout_constraintDimensionRatio="W,1:2"-->
+<!--                    android:padding="5dp"-->
+<!--                    app:layout_constraintHorizontal_weight="1"-->
+<!--                    app:layout_constraintLeft_toRightOf="@+id/stv_medicalservice4"-->
+<!--                    app:layout_constraintRight_toRightOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/stv_medicalservice3"-->
+<!--                    app:sRightBottomTextColor="@color/icon_gray"-->
+<!--                    app:sRightBottomTextSize="@dimen/font_small"-->
+<!--                    app:sRightBottomTextString="@string/kky_medicalservice_detail_5"-->
+<!--                    app:sRightIconHeight="30dp"-->
+<!--                    app:sRightIconRes="@drawable/icon_kky_sleep"-->
+<!--                    app:sRightIconWidth="30dp"-->
+<!--                    app:sRightTopTextIsBold="true"-->
+<!--                    app:sRightTopTextSize="@dimen/font_normal"-->
+<!--                    app:sRightTopTextString="@string/kky_medicalservice_5"-->
+<!--                    app:sRightViewGravity="left_center"-->
+<!--                    app:sShapeSolidColor="@color/green" />-->
+
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:orientation="vertical"-->
+<!--                android:tag="sticky">-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/tv_my_healthadvice"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:text="@string/kky_my_health_advice"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_normal"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <com.google.android.material.tabs.TabLayout-->
+<!--                    android:id="@+id/tablayout_healthadvice"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:tabSelectedTextColor="@color/icon_blue"-->
+<!--                    app:tabRippleColor="@color/icon_gray"-->
+<!--                    app:tabIndicatorColor="@color/icon_blue"-->
+<!--                    app:tabGravity="fill" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <androidx.viewpager.widget.ViewPager-->
+<!--                android:id="@+id/viewpager_health_advice"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1000dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@color/white"-->
+<!--                android:fitsSystemWindows="true" />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </com.kky.healthcaregardens.common.widget.scrollview.StickyScrollView>-->
+
+</LinearLayout>

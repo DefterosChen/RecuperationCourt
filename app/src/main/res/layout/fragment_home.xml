@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".common.view.fragment.HomeFragment"
+    tools:ignore="HardcodedText">
+
+
+    <com.hjq.bar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backButton="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/icon_padding">
+
+            <LinearLayout
+                android:id="@+id/linearlayout_citychoice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:gravity="left">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_citychoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="left"
+                    android:singleLine="true"
+                    android:maxEms="4"
+                    android:ellipsize="middle"
+                    android:text="@string/kky_my_location"
+                    android:textColor="@color/icon_blue"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/icon_small_size"
+                    android:layout_height="@dimen/icon_small_size"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/pic_arrow_down"
+                    android:tint="@color/icon_blue"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center"
+                android:id="@+id/ll_search">
+
+
+                <com.kyy.recuperationcourt.common.other.widget.searchview.KylinSearchView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sv_default"
+                   />
+            </LinearLayout>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_qrcode"
+                android:layout_width="@dimen/icon_normal_size"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/icon_small_size"
+                android:gravity="center_vertical"
+                android:src="@drawable/icon_gray_qrcode"
+                app:layout_constraintRight_toLeftOf="@id/iv_system_messages" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_system_messages"
+                android:layout_width="@dimen/icon_normal_size"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/icon_gray_bubbleframe"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.hjq.bar.TitleBar>
+
+    <com.kyy.recuperationcourt.common.other.widget.scrollview.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+
+            <com.kyy.recuperationcourt.common.other.widget.banner.RadiusImageBanner
+                android:id="@+id/rib_simple_usage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bb_barPaddingBottom="10dp"
+                app:bb_scale="0.4317" />
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_my_servicecourse"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/kky_my_health_course"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold" />
+
+            <com.kyy.recuperationcourt.common.other.widget.layout.ItemInfoLinearLayout
+                android:id="@+id/iill_servicecourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="5dp" />
+
+
+            <com.hjq.bar.TitleBar
+                android:id="@+id/tt_my_recommendtoday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backButton="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/icon_padding">
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_recommendtoday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_my_recommendtoday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:text="@string/kky_recommend_today"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_normal" />
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/kky_change"
+                        android:textColor="@color/icon_gray"
+                        android:textSize="@dimen/font_small"
+                        app:layout_constraintRight_toLeftOf="@id/iv_change" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_change"
+                        android:layout_width="@dimen/icon_normal_size"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/icon_gray_change"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.hjq.bar.TitleBar>
+
+
+            <com.kyy.recuperationcourt.common.other.widget.layout.ItemInfoLinearLayout
+                android:id="@+id/iill_recommendtoday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_my_medicalservice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/kky_my_medical_service"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/stv_medicalservice1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sLeftBottomTextColor="@color/icon_gray"
+                    app:sLeftBottomTextSize="@dimen/font_small"
+                    app:sLeftBottomTextString="@string/kky_medicalservice_detail_1"
+                    app:sLeftTopTextIsBold="true"
+                    app:sLeftTopTextSize="@dimen/font_normal"
+                    app:sLeftTopTextString="@string/kky_medicalservice_1"
+                    app:sLeftViewGravity="left_center"
+                    app:sRightIconHeight="30dp"
+                    app:sRightIconRes="@drawable/kky_medicals_1"
+                    app:sRightIconWidth="30dp" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/stv_medicalservice2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintDimensionRatio="W,1:2"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/stv_medicalservice3"
+                    app:layout_constraintTop_toBottomOf="@id/stv_medicalservice1"
+                    app:layout_constraintWidth_percent="0.5"
+                    app:sRightBottomTextColor="@color/icon_gray"
+                    app:sRightBottomTextSize="@dimen/font_small"
+                    app:sRightBottomTextString="@string/kky_medicalservice_detail_2"
+                    app:sRightIconHeight="30dp"
+                    app:sRightIconRes="@drawable/kky_medicals_2"
+                    app:sRightIconWidth="30dp"
+                    app:sRightTopTextIsBold="true"
+                    app:sRightTopTextSize="@dimen/font_normal"
+                    app:sRightTopTextString="@string/kky_medicalservice_2"
+                    app:sRightViewGravity="left_center" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/stv_medicalservice3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintDimensionRatio="W,1:2"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/stv_medicalservice2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/stv_medicalservice1"
+                    app:layout_constraintWidth_percent="0.5"
+                    app:sRightBottomTextColor="@color/icon_gray"
+                    app:sRightBottomTextSize="@dimen/font_small"
+                    app:sRightBottomTextString="@string/kky_medicalservice_detail_3"
+                    app:sRightIconHeight="30dp"
+                    app:sRightIconRes="@drawable/kky_medicals_5"
+                    app:sRightIconWidth="30dp"
+                    app:sRightTopTextIsBold="true"
+                    app:sRightTopTextSize="@dimen/font_normal"
+                    app:sRightTopTextString="@string/kky_medicalservice_3"
+                    app:sRightViewGravity="left_center" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/stv_medicalservice4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintDimensionRatio="W,1:2"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/stv_medicalservice5"
+                    app:layout_constraintTop_toBottomOf="@id/stv_medicalservice2"
+                    app:layout_constraintWidth_percent="0.5"
+                    app:sRightBottomTextColor="@color/icon_gray"
+                    app:sRightBottomTextSize="@dimen/font_small"
+                    app:sRightBottomTextString="@string/kky_medicalservice_detail_4"
+                    app:sRightIconHeight="30dp"
+                    app:sRightIconRes="@drawable/kky_medicals_6"
+                    app:sRightIconWidth="30dp"
+                    app:sRightTopTextIsBold="true"
+                    app:sRightTopTextSize="@dimen/font_normal"
+                    app:sRightTopTextString="@string/kky_medicalservice_4"
+                    app:sRightViewGravity="left_center" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/stv_medicalservice5"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="5dp"
+                    app:layout_constraintDimensionRatio="W,1:2"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/stv_medicalservice4"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/stv_medicalservice3"
+                    app:layout_constraintWidth_percent="0.5"
+                    app:sRightBottomTextColor="@color/icon_gray"
+                    app:sRightBottomTextSize="@dimen/font_small"
+                    app:sRightBottomTextString="@string/kky_medicalservice_detail_5"
+                    app:sRightIconHeight="30dp"
+                    app:sRightIconRes="@drawable/kky_medicals_4"
+                    app:sRightIconWidth="30dp"
+                    app:sRightTopTextIsBold="true"
+                    app:sRightTopTextSize="@dimen/font_normal"
+                    app:sRightTopTextString="@string/kky_medicalservice_5"
+                    app:sRightViewGravity="left_center" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+
+    </com.kyy.recuperationcourt.common.other.widget.scrollview.StickyScrollView>>
+
+</LinearLayout>

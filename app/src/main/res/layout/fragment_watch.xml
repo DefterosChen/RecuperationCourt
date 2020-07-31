@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".common.view.fragment.device.smartwatch.WatchFragment">
+
+    <com.hjq.bar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backButton="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/icon_padding">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/icon_normal_size"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:src="@drawable/icon_kyy_gray_back"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/kky_mydevice_watch"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.hjq.bar.TitleBar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rd_my_device_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_normal"
+            android:button="@null"
+            android:drawableTop="@drawable/icon_kky_wechat"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/kky_device_watch_wechat"
+            android:textColor="@color/icon_gray"
+            android:textSize="@dimen/font_small" />
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rd_my_device_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_normal"
+            android:button="@null"
+            android:drawableTop="@drawable/icon_kky_phone"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/kky_device_watch_call"
+            android:textColor="@color/icon_gray"
+            android:textSize="@dimen/font_small" />
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rd_my_device_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_normal"
+            android:button="@null"
+            android:drawableTop="@drawable/icon_kky_phonebook"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/kky_device_watch_phonebook"
+            android:textColor="@color/icon_gray"
+            android:textSize="@dimen/font_small" />
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rd_my_device_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_normal"
+            android:button="@null"
+            android:drawableTop="@drawable/icon_kky_medicinal"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/kky_device_watch_medicine"
+            android:textColor="@color/icon_gray"
+            android:textSize="@dimen/font_small" />
+
+    </LinearLayout>
+
+
+    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/transparent"
+        app:sCenterBottomTextSize="@dimen/font_small"
+        app:sCenterBottomTextString="@string/kky_device_watch_locatetime"
+        app:sCenterTopTextIsBold="true"
+        app:sCenterTopTextSize="@dimen/font_normal"
+        app:sCenterTopTextString="@string/kky_device_watch_locate"
+        app:sLeftIconHeight="30dp"
+        app:sLeftIconMarginLeft="20dp"
+        app:sLeftIconRes="@drawable/icon_kky_locate"
+        app:sLeftIconWidth="30dp"
+        app:sRightIconHeight="20dp"
+        app:sRightIconMarginRight="10dp"
+        app:sRightIconRes="@drawable/icon_arrow_right_grey"
+        app:sRightIconWidth="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <include
+            android:id="@+id/include_step"
+            layout="@layout/item_device_data" />
+
+        <include
+            android:id="@+id/include_heartrate"
+            layout="@layout/item_device_data" />
+
+        <include
+            android:id="@+id/include_sleep"
+            layout="@layout/item_device_data" />
+
+        <include
+            android:id="@+id/include_bloodpressure"
+            layout="@layout/item_device_data" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

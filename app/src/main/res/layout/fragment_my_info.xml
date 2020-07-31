@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".common.view.fragment.mine.MyInfoFragment">
+
+    <com.hjq.bar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backButton="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/icon_padding">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/icon_normal_size"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:src="@drawable/icon_kyy_gray_back"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/kky_personal_info"
+                android:textSize="@dimen/font_normal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:text="@string/kky_save"
+                android:textColor="@color/icon_blue"
+                android:textSize="@dimen/font_normal"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.hjq.bar.TitleBar>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout style="@style/PullDownStyle">
+
+        <androidx.core.widget.NestedScrollView style="@style/ScrollViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_headicon"
+                    android:layout_height="60dp"
+                    style="@style/InfoItem.Account"
+                    app:sRightViewMarginRight="10dp"
+                    app:sRightIconRes="@drawable/icon_blue_default_avatar"
+                    app:sRightIconHeight="38dp"
+                    app:sRightIconWidth="38dp"
+                    app:sRightIconMarginRight="5dp"
+                    app:sLeftTextString="@string/kky_headicon"
+                    />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_username"
+                    style="@style/InfoItem.Account"
+                    android:layout_marginTop="20dp"
+                    app:sLeftTextString="@string/kky_username" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_sex"
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="@string/kky_sex"
+                    app:sRightTextString="@string/kky_sex_n"
+                    />
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_phone"
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="@string/kky_user_phone"
+                    />
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_birth"
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="@string/kky_user_birth"
+                    />
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_address"
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="@string/kky_user_address"
+                    />
+
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_height"
+                    style="@style/InfoItem.Account"
+                    android:layout_marginTop="20dp"
+                    app:sLeftTextString="@string/kky_user_height"
+                    />
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_weight"
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="@string/kky_user_weight"
+                    />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_realname"
+                    style="@style/InfoItem.Account"
+                    android:layout_marginTop="20dp"
+                    app:sLeftTextString="@string/kky_user_realname"
+                    android:visibility="gone"
+                    />
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_residenceaddress"
+                    style="@style/InfoItem.Account"
+                    android:layout_marginTop="20dp"
+                    app:sLeftTextString="@string/kky_user_residenceaddress"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

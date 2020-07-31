@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".common.view.fragment.social.elder.AddElderHealthFragment"
+    tools:ignore="HardcodedText">
+
+    <com.hjq.bar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backButton="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/icon_padding">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_submit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/kyy_workorder_submit"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.hjq.bar.TitleBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_eldername"
+            style="@style/InfoItem.Account"
+            app:sLeftTextString="@string/kyy_elderhealth_name" />
+
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_height"
+            style="@style/InfoItem.Account"
+            app:sLeftTextString="@string/kyy_elderhealth_height" />
+
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_weight"
+            style="@style/InfoItem.Account"
+            app:sLeftTextString="@string/kyy_elderhealth_weight" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/kyy_elderhealth_des"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal"
+            />
+
+        <com.xuexiang.xui.widget.edittext.MultiLineEditText
+            android:id="@+id/et_item_des"
+            style="@style/EditText.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            app:mlet_contentPadding="2dp"
+            android:singleLine="false"
+            app:mlet_maxCount="140"
+            app:mlet_showSurplusNumber="true" />
+    </LinearLayout>
+
+</LinearLayout>

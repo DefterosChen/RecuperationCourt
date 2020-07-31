@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    tools:context=".common.view.fragment.ConsultFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_my_service_health"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="@string/kky_my_health_service"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal"
+        android:textStyle="bold" />
+
+    <com.kyy.recuperationcourt.common.other.widget.layout.ItemInfoLinearLayout
+        android:id="@+id/iill_servicehealth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:tag="sticky">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_my_healthadvice"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="@string/kky_my_health_advice"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal"
+            android:textStyle="bold" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout_healthadvice"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabSelectedTextColor="@color/icon_blue"
+            app:tabRippleColor="@color/icon_gray"
+            app:tabIndicatorColor="@color/icon_blue"
+            app:tabGravity="fill" />
+
+    </LinearLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_health_advice"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:fitsSystemWindows="true" />
+
+</LinearLayout>

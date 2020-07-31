@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".common.view.fragment.social.elder.AddElderFragment"
+    tools:ignore="HardcodedText">
+
+    <com.hjq.bar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backButton="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/icon_padding">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_submit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/kyy_workorder_submit"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_family"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:text="@string/kyy_elder_family"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_elderservice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:text="@string/kyy_elder_service"
+                app:layout_constraintLeft_toRightOf="@+id/tv_family" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.hjq.bar.TitleBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_eldername"
+            style="@style/InfoItem.Account"
+            app:sLeftTextString="@string/kyy_elder_name" />
+
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_sex"
+            style="@style/InfoItem.Account"
+            app:sLeftTextString="@string/kyy_elder_sex" />
+
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_birth"
+            style="@style/InfoItem.Account"
+            app:sLeftTextString="@string/kyy_elder_birth" />
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_idcard"
+            style="@style/InfoItem.Account"
+            app:sLeftTextString="@string/kyy_elder_idcard" />
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/menu_mobile"
+            style="@style/InfoItem.Account"
+            app:sLeftTextString="@string/kyy_elder_mobile" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/kyy_elder_address_res"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal"
+            />
+
+        <EditText
+            android:id="@+id/et_item_address"
+            style="@style/EditText.Normal"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:singleLine="true"
+            android:maxLength="140"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_city" />
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_resaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/kyy_elder_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal"
+            />
+
+        <EditText
+            android:id="@+id/et_item_resaddress"
+            style="@style/EditText.Normal"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:singleLine="true"
+            android:maxLength="140"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_city" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/kyy_elder_remarks"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal"
+            />
+
+        <com.xuexiang.xui.widget.edittext.MultiLineEditText
+            android:id="@+id/et_item_remarks"
+            style="@style/EditText.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            app:mlet_contentPadding="2dp"
+            android:singleLine="false"
+            app:mlet_maxCount="140"
+            app:mlet_showSurplusNumber="true" />
+    </LinearLayout>
+
+</LinearLayout>

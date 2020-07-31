@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/kky_user_weight"
+            android:textColor="@color/black"
+            android:id="@+id/textView_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="@dimen/font_normal" />
+
+
+        <com.xuexiang.xui.widget.alpha.XUIAlphaButton
+            android:id="@+id/btn_get"
+            style="@style/Button.Primary.wrap"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_margin="5dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="确定"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray" />
+
+    <com.xuexiang.xui.widget.picker.RulerView
+        android:id="@+id/rulerView_weight"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+
+        app:rv_firstScale="50"
+        app:rv_minScale="0"
+        app:rv_maxScale="100"
+        app:rv_scaleCount="10"
+        app:rv_unit="kg"
+
+        app:rv_bgColor="#fcfffc"
+        app:rv_smallScaleColor="#aaaaaa"
+        app:rv_midScaleColor="#999999"
+        app:rv_largeScaleColor="#50b586"
+        app:rv_resultNumColor="#50b586"
+        app:rv_scaleNumColor="#666666"
+        app:rv_unitColor="#50b586"
+        app:rv_unitTextSize="10sp" />
+
+
+    <com.xuexiang.xui.widget.picker.RulerView
+        android:id="@+id/rulerView_height"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+
+        app:rv_firstScale="175"
+        app:rv_minScale="50"
+        app:rv_maxScale="230"
+        app:rv_scaleCount="5"
+        app:rv_unit="cm"
+
+        app:rv_bgColor="#fcfffc"
+        app:rv_smallScaleColor="@color/colorPrimary"
+        app:rv_midScaleColor="@color/colorPrimaryDark"
+        app:rv_largeScaleColor="@color/colorAccent"
+        app:rv_resultNumColor="#50b586"
+        app:rv_scaleNumColor="#666666"
+        app:rv_unitColor="#50b586"
+        app:rv_unitTextSize="10sp"
+        android:visibility="gone"/>
+
+</LinearLayout>

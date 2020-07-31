@@ -1,0 +1,1569 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="CustomAppTheme">
+
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- 窗口背景颜色 -->
+
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <!-- 应用的主要色调，actionBar默认使用该颜色，Toolbar导航栏的底色 -->
+        <!--Button、TextView的文字颜色-->
+        <item name="android:textColor">@color/textColor</item>
+        <!-- Button、TextView的提示文字颜色 -->
+        <item name="android:textColorHint">@color/textColorHint</item>
+        <!-- ActionMode覆盖Actionbar，不顶下来 -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- ActionMode的颜色 -->
+        <item name="actionModeBackground">@color/transparent</item>
+        <!-- 解决 Android 5.1 及以上版本 Button 英文字符串自动变大写的问题 -->
+        <item name="android:textAllCaps">false</item>
+        <!-- 默认隐藏输入法，开启这个选项后会导致输入对话框在关闭之后不能关闭软键盘 -->
+        <!--<item name="android:windowSoftInputMode">stateHidden</item>-->
+    </style>
+
+
+    <!-- 解决启动页白屏的问题 -->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <!-- 不带圆角按钮样式 -->
+    <style name="RectButtonStyle" parent="ButtonStyle">
+        <item name="android:background">@drawable/selector_button_rect</item>
+    </style>
+
+    <!-- 默认文本框样式 -->
+    <style name="EditTextStyle">
+        <item name="android:background">@null</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColorHint">#A4A4A4</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <!-- 默认水平分割线样式 -->
+    <style name="HorizontalLineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_size</item>
+        <item name="android:background">@color/colorLine</item>
+    </style>
+
+    <!-- 默认垂直分割线样式 -->
+    <style name="VerticalLineStyle">
+        <item name="android:layout_width">@dimen/line_size</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorLine</item>
+    </style>
+
+    <!-- 获取验证码样式 -->
+    <style name="CountdownViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_countdown</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:minWidth">90dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/common_code_send</item>
+        <item name="android:textColor">@drawable/selector_countdown_color</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- 圆形 CardView 样式 -->
+    <style name="CircleCardViewStyle" parent="Base.CardView">
+        <item name="cardElevation">0px</item>
+        <item name="cardBackgroundColor">#00000000</item>
+        <item name="cardCornerRadius">999dp</item>
+    </style>
+
+    <!-- 对话框默认样式 -->
+    <style name="BaseDialogStyle" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <!-- @android:style/Theme.Dialog -->
+        <!-- 无边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 浮在 Activity 之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 遮盖层 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 动画效果 -->
+        <item name="android:windowEnterAnimation">@anim/dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_scale_out</item>
+        <!-- Base.Theme.AppCompat.Light.Dialog.Alert 特有的属性，用于指定默认宽度，这里需要禁用 -->
+        <item name="android:windowMinWidthMajor">0dp</item>
+        <item name="android:windowMinWidthMinor">0dp</item>
+        <!-- 解决 ActionBar 占位导致 Dialog 无法全屏显示的问题 -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- ActionMode 覆盖 Actionbar，不顶下来 -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 不感知敏感的切换 -->
+        <!--<item name="android:configChanges">orientation|screenSize|keyboardHidden</item>-->
+        <!-- 默认隐藏输入法 -->
+        <!--<item name="android:windowSoftInputMode">stateHidden</item>-->
+        <!-- Dialog 全屏显示 -->
+        <!--<item name="android:windowFullscreen">true</item>-->
+    </style>
+
+    <!-- 缩放动画 -->
+    <style name="ScaleAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_scale_out</item>
+    </style>
+
+    <!-- ios 动画 -->
+    <style name="IOSAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_ios_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_ios_out</item>
+    </style>
+
+    <!-- 顶部弹出动画 -->
+    <style name="TopAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_top_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_top_out</item>
+    </style>
+
+    <!-- 底部弹出动画 -->
+    <style name="BottomAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_out</item>
+    </style>
+
+    <!-- 左边弹出动画 -->
+    <style name="LeftAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_left_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_left_out</item>
+    </style>
+    <!-- 右边弹出动画 -->
+    <style name="RightAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_right_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_right_out</item>
+    </style>
+
+    <style name="WindowAnimStyle" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/xpage_slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/xpage_slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/xpage_slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/xpage_slide_out_right</item>
+    </style>
+
+    <!--    &lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--    <style name="AppTheme" parent="XUITheme.Phone">-->
+    <!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--        <item name="colorAccent">@color/colorAccent</item>-->
+    <!--    </style>-->
+
+
+    <!--窗体背景，这个背景能在第一时间显示, 避免启动时白屏，黑屏问题-->
+    <style name="XUITheme.Launch.Demo">
+        <item name="android:windowBackground">@drawable/xui_config_bg_splash</item>
+        <item name="xui_config_splash_app_logo">@drawable/logo_kky</item>
+        <item name="xui_config_splash_company_logo">@drawable/logo_kky</item>
+
+        <!--        <item name="xui_config_splash_company_logo">@drawable/ic_splash_company_logo_xuexiang</item>-->
+    </style>
+
+    <!--XVideo-->
+    <style name="XVideoNoBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
+    <!--SettingTheme-->
+    <style name="SettingTheme" parent="XUITheme.Phone">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--有Title-->
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+    </style>
+
+
+    <style name="ActionBarStyle" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/ToolbarTitle</item>
+        <item name="subtitleTextStyle">@style/ToolbarSubTitle</item>
+        <item name="background">?attr/colorPrimary</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+
+    <!--DialogTheme，用于将Activity作为Dialog的主题-->
+    <style name="DialogTheme" parent="XUITheme.Phone">
+        <!--设置dialog的背景，此处为系统给定的透明值-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>　　　　　
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--是否有覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--设置Activity出现方式-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- 自定义默认二维码扫描界面的主题. -->
+    <style name="XQRCodeTheme.Custom">
+        <item name="ViewfinderViewStyle">@style/ViewfinderView.Custom</item>
+    </style>
+
+    <style name="ViewfinderView.Custom">
+        <item name="inner_corner_color">#FF9900</item>
+        <!--<item name="inner_scan_bitmap">@drawable/ic_qrcode_scanning</item>-->
+        <item name="inner_corner_width">6dp</item>
+        <item name="inner_scan_bitmap_tint">#FF9900</item>
+        <item name="inner_scan_animation_interval">25</item>
+    </style>
+
+    <style name="AppTheme.Camera">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <style name="XQRCodeTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="ViewfinderViewStyle">@style/ViewfinderView</item>
+    </style>
+
+    <attr name="ViewfinderViewStyle" format="reference" />
+    <color name="default_inner_corner_color">#0DC2FE</color>
+    <color name="default_mask_color">#60000000</color>
+    <color name="default_result_color">#B0000000</color>
+    <color name="default_result_point_color">#C0FFFF00</color>
+    <declare-styleable name="ViewfinderView">
+        <!-- 扫描框的宽度，默认为屏幕宽度的3／4 -->
+        <attr name="inner_width" format="dimension" />
+        <!-- 扫描框的高度，默认为屏幕宽度的3／4 -->
+        <attr name="inner_height" format="dimension" />
+        <!-- 扫描框距离顶部的距离，默认居中-->
+        <attr name="inner_marginTop" format="dimension" />
+        <!-- 扫描框四角的颜色，默认为#0DC2FE-->
+        <attr name="inner_corner_color" format="color" />
+        <!-- 扫描框四角的长度，默认为32dp-->
+        <attr name="inner_corner_length" format="dimension" />
+        <!-- 扫描框四角的宽度，默认为6dp-->
+        <attr name="inner_corner_width" format="dimension" />
+        <!-- 扫描控件图资源，默认为R.drawable.xqrcode_ic_scan_light-->
+        <attr name="inner_scan_bitmap" format="reference" />
+        <!-- 扫描控件图资源的色调，默认是-1-->
+        <attr name="inner_scan_bitmap_tint" format="color" />
+        <!-- 扫描速度，默认为5dp-->
+        <attr name="inner_scan_speed" format="dimension" />
+        <!-- 扫描动画绘制的间期，单位是ms， 默认是25ms-->
+        <attr name="inner_scan_animation_interval" format="integer" />
+        <!-- 小圆点是否展示，默认为true-->
+        <attr name="inner_scan_isCircle" format="boolean" />
+        <attr name="inner_result_color" format="color" />
+        <attr name="inner_result_point_color" format="color" />
+        <attr name="inner_mask_color" format="color" />
+    </declare-styleable>
+    <dimen name="default_inner_corner_length">32dp</dimen>
+    <dimen name="default_inner_corner_width">6dp</dimen>
+    <dimen name="default_inner_scan_speed">5dp</dimen>
+    <item name="auto_focus" type="id" />
+    <item name="decode" type="id" />
+    <item name="decode_failed" type="id" />
+    <item name="decode_succeeded" type="id" />
+    <item name="encode_failed" type="id" />
+    <item name="encode_succeeded" type="id" />
+    <item name="launch_product_query" type="id" />
+    <item name="quit" type="id" />
+    <item name="restart_preview" type="id" />
+    <item name="return_scan_result" type="id" />
+    <item name="search_book_contents_failed" type="id" />
+    <item name="search_book_contents_succeeded" type="id" />
+    <string name="xqrcode_not_get_permission">照相机打开失败，请检查权限是否未获取！</string>
+    <string name="xqrcode_pay_attention">注意</string>
+    <string name="xqrcode_submit">确定</string>
+
+    <style name="ViewfinderView">
+        <item name="inner_corner_color">@color/default_inner_corner_color</item>
+        <item name="inner_corner_length">@dimen/default_inner_corner_length</item>
+        <item name="inner_corner_width">@dimen/default_inner_corner_width</item>
+        <item name="inner_scan_bitmap">@drawable/xqrcode_ic_scan_light</item>
+        <item name="inner_scan_speed">@dimen/default_inner_scan_speed</item>
+        <item name="inner_scan_animation_interval">25</item>
+        <item name="inner_scan_isCircle">true</item>
+        <item name="inner_result_color">@color/default_result_color</item>
+        <item name="inner_result_point_color">@color/default_result_point_color</item>
+        <item name="inner_mask_color">@color/default_mask_color</item>
+    </style>
+
+    <!--================styles_demo======================-->
+    <!--GuideCaseView-->
+    <style name="MyTitleStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#00ff00</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+
+    <!-- FabMenu -->
+    <style name="FabMenu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!-- PhotoPicker -->
+    <style name="actionBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="actionBarSize">48dp</item>
+    </style>
+
+    <style name="PhotoPickerTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionBarTheme">@style/actionBarTheme</item>
+        <item name="colorPrimary">#299EE3</item>
+        <item name="actionBarSize">48dp</item>
+        <item name="colorPrimaryDark">#299EE3</item>
+    </style>
+
+    <!--CityPicker-->
+    <style name="CustomAnim">
+        <item name="android:windowEnterAnimation">@anim/custom_push_down_in</item>
+        <item name="android:windowExitAnimation">@anim/custom_push_up_out</item>
+    </style>
+
+
+    <style name="EditInfoItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="sLeftTextSize">17sp</item>
+        <item name="sLeftTextColor">@color/xui_config_color_black</item>
+        <item name="sCenterTextColor">@color/xui_config_color_black</item>
+        <item name="sLeftViewWidth">60dp</item>
+        <item name="sLeftViewGravity">left_center</item>
+        <item name="sCenterViewGravity">left_center</item>
+        <item name="sCenterViewMarginLeft">25dp</item>
+        <item name="sCenterViewMarginRight">25dp</item>
+        <item name="sDividerLineHeight">2dp</item>
+        <item name="sRightTextSize">13sp</item>
+        <item name="sRightViewMarginRight">0dp</item>
+        <item name="sUseRipple">false</item>
+        <item name="sEnableEdit">true</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light">
+        <!-- 更换 Toolbar OVerFlow menu icon -->
+        <item name="actionOverflowButtonStyle">@style/OverFlowIcon</item>
+        <!-- 设置 Toolbar 溢出菜单的文字的颜色 -->
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <!-- 设置 显示在Toolbar上菜单文字的颜色 -->
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <!-- 设置toolbar 弹出菜单的字体大小-->
+        <item name="android:textSize">15sp</item>
+        <item name="toolbarNavigationButtonStyle">@style/ToolbarNavigationButtonStyle</item>
+        <item name="colorControlNormal">@color/xui_config_color_white</item>
+        <item name="colorControlActivated">@color/xui_config_color_white</item>
+    </style>
+
+    <style name="ToolbarStyle" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?attr/colorAccent</item>
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="subtitleTextColor">@android:color/white</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">?attr/xui_actionbar_title_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ToolbarSubTitle" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textSize">?attr/xui_actionbar_sub_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="OverFlowIcon" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_navigation_more</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="TextStyle.Calendar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/xui_config_color_content_text</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="pop_window_anim_style" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_show_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_hidden_anim</item>
+    </style>
+
+
+    <!--================styles_widget======================-->
+    <style name="TextStyle.Content.Match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- SwitchButton -->
+    <style name="SwitchButtonStyle">
+        <item name="android:paddingLeft">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingRight">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingTop">?attr/xui_config_content_spacing_vertical</item>
+        <item name="android:paddingBottom">?attr/xui_config_content_spacing_vertical</item>
+    </style>
+
+    <style name="SwitchButtonStyleMD" parent="SwitchButtonMD">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="Container">
+        <item name="android:paddingStart">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingEnd">?attr/xui_config_content_spacing_horizontal</item>
+    </style>
+
+    <style name="InfoItem" parent="Container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="sLeftViewMarginLeft">0dp</item>
+        <item name="sRightViewMarginRight">0dp</item>
+        <item name="sRightIconMarginRight">0dp</item>
+        <item name="sLeftIconMarginLeft">0dp</item>
+        <item name="sLeftTextSize">?attr/xui_config_size_content_text</item>
+        <item name="sLeftTextColor">@color/xui_config_color_title_text</item>
+        <item name="sCenterTextColor">@color/xui_config_color_black</item>
+        <item name="sRightTextColor">@color/xui_config_color_explain_text</item>
+        <item name="sRightTextSize">?attr/xui_config_size_content_text</item>
+    </style>
+
+    <style name="InfoItem.Account">
+        <item name="sLeftViewWidth">110dp</item>
+        <item name="sLeftViewGravity">left_center</item>
+        <item name="sCenterViewGravity">left_center</item>
+        <item name="sCenterViewMarginLeft">25dp</item>
+        <item name="sRightTextSize">?attr/xui_config_size_content_text</item>
+        <item name="sRightViewMarginRight">10dp</item>
+        <item name="sRightIconRes">@drawable/icon_arrow_right_grey</item>
+    </style>
+
+    <style name="RadiusImageView.Circle">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="riv_is_circle">true</item>
+        <item name="riv_border_width">0dp</item>
+    </style>
+
+
+    <!-- MaterialProgressBar -->
+    <style name="Widget.MaterialProgressBar.ProgressBar.Horizontal" parent="android:Widget.ProgressBar.Horizontal">
+        <!--
+        Disabled for correct behavior on Android 4.x, see
+        https://github.com/android/platform_frameworks_base/commit/911743652b597057a1bd7ef8a921e9ff8dce0f4a#diff-149f45c5ff2d3185bb79688ba17bc432L536
+        <item name="android:progressDrawable">@null</item>
+        -->
+        <item name="android:indeterminateDrawable">@null</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+    </style>
+
+    <style name="Widget.MaterialProgressBar.ProgressBar.Horizontal.NoPadding">
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+    </style>
+
+    <style name="Widget.MaterialProgressBar.ProgressBar" parent="android:Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@null</item>
+        <!-- We have support for determinate circular progress drawable. -->
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:maxWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">48dp</item>
+    </style>
+
+    <style name="Widget.MaterialProgressBar.ProgressBar.NoPadding">
+        <item name="android:minWidth">42dp</item>
+        <item name="android:maxWidth">42dp</item>
+        <item name="android:minHeight">42dp</item>
+        <item name="android:maxHeight">42dp</item>
+    </style>
+
+    <style name="Widget.MaterialProgressBar.ProgressBar.Large">
+        <item name="android:minWidth">76dp</item>
+        <item name="android:maxWidth">76dp</item>
+        <item name="android:minHeight">76dp</item>
+        <item name="android:maxHeight">76dp</item>
+    </style>
+
+    <style name="Widget.MaterialProgressBar.ProgressBar.Large.NoPadding">
+        <item name="android:minWidth">66.5dp</item>
+        <item name="android:maxWidth">66.5dp</item>
+        <item name="android:minHeight">66.5dp</item>
+        <item name="android:maxHeight">66.5dp</item>
+    </style>
+
+    <style name="Widget.MaterialProgressBar.ProgressBar.Small">
+        <item name="android:minWidth">16dp</item>
+        <item name="android:maxWidth">16dp</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+    </style>
+
+    <style name="Widget.MaterialProgressBar.ProgressBar.Small.NoPadding">
+        <item name="android:minWidth">14dp</item>
+        <item name="android:maxWidth">14dp</item>
+        <item name="android:minHeight">14dp</item>
+        <item name="android:maxHeight">14dp</item>
+    </style>
+
+
+
+    <!--TabLayout-->
+    <style name="TabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/selector_tab_text_color</item>
+        <item name="android:textSize">?attr/xui_config_size_content_text</item>
+    </style>
+
+    <style name="TabText.Explain">
+        <item name="android:textColor">@color/selector_tab_text_color</item>
+        <item name="android:textSize">?attr/xui_config_size_explain_text</item>
+    </style>
+
+    <style name="StatusView.Custom">
+        <item name="sv_complete">@layout/sv_layout_complete</item>
+        <item name="sv_error">@layout/sv_layout_error</item>
+        <item name="sv_loading">@layout/sv_layout_loading</item>
+        <item name="sv_custom">@layout/sv_layout_custom</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="android:background">@color/xui_config_color_white</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/TabText</item>
+        <item name="tabSelectedTextColor">?attr/colorAccent</item>
+        <item name="tabTextColor">@color/xui_config_color_gray_6</item>
+    </style>
+
+
+
+
+
+
+    <!--*********************************************
+   *                CommonButtonStyle              *
+   **********************************************-->
+    <style name="Button.Style" parent="@style/Button">
+        <item name="android:layout_width">?attr/xui_btn_view_width</item>
+        <item name="android:layout_height">?attr/xui_btn_view_height</item>
+        <item name="android:textSize">?attr/xui_btn_view_text_size</item>
+        <item name="android:textColor">@color/xui_config_color_white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Button.Blue" parent="Button.Style">
+        <item name="android:background">@drawable/xui_config_bg_blue_btn</item>
+    </style>
+
+    <style name="Button.Blue.wrap">
+        <item name="android:paddingStart">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingEnd">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!--XUIAlphaButton-->
+    <style name="Button.Primary" parent="Button.Style">
+        <item name="android:background">@drawable/xui_config_bg_primary_btn</item>
+    </style>
+
+    <!--XUIAlphaButton-->
+    <style name="Button.Primary.wrap">
+        <item name="android:paddingStart">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingEnd">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="Button.Radius" parent="@style/Button">
+        <item name="android:layout_height">?attr/xui_btn_view_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingStart">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingEnd">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:background">@drawable/rb_bg_selector</item>
+        <item name="android:textColor">?attr/xui_round_btn_text_color</item>
+        <item name="android:textSize">?attr/xui_btn_view_text_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--    &lt;!&ndash;*********************************************-->
+    <!--    *                 ButtonViewStyle               *-->
+    <!--    **********************************************&ndash;&gt;-->
+    <!--    &lt;!&ndash; Button style &ndash;&gt;-->
+    <!--    <style name="ButtonStyle">-->
+    <!--        <item name="android:layout_width">?attr/xui_btn_view_width</item>-->
+    <!--        <item name="android:layout_height">?attr/xui_btn_view_height</item>-->
+    <!--        <item name="android:textSize">?attr/xui_btn_view_text_size</item>-->
+    <!--        <item name="android:textColor">@color/xui_config_color_white</item>-->
+    <!--        <item name="android:gravity">center</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="ButtonView" parent="ButtonStyle">-->
+    <!--        <item name="textRadius">?attr/xui_btn_view_radius</item>-->
+    <!--    </style>-->
+
+    <!--    &lt;!&ndash; Green Button Style &ndash;&gt;-->
+    <!--    <style name="ButtonView.Green">-->
+    <!--        <item name="textSolidColor">@color/xui_btn_green_normal_color</item>-->
+    <!--        <item name="textSelectedSolidColor">@color/xui_btn_green_select_color</item>-->
+    <!--        <item name="android:text">@string/xui_lab_button_submit</item>-->
+    <!--    </style>-->
+
+    <!--    &lt;!&ndash; Blue Button Style &ndash;&gt;-->
+    <!--    <style name="ButtonView.Blue">-->
+    <!--        <item name="textSolidColor">@color/xui_btn_blue_normal_color</item>-->
+    <!--        <item name="textSelectedSolidColor">@color/xui_btn_blue_select_color</item>-->
+    <!--        <item name="android:text">@string/xui_lab_button_reset</item>-->
+    <!--    </style>-->
+
+    <!--    &lt;!&ndash; Gray Button Style &ndash;&gt;-->
+    <!--    <style name="ButtonView.Gray">-->
+    <!--        <item name="textSolidColor">@color/xui_btn_gray_normal_color</item>-->
+    <!--        <item name="textSelectedSolidColor">@color/xui_btn_gray_select_color</item>-->
+    <!--        <item name="android:text">@string/xui_lab_button_cancel</item>-->
+    <!--    </style>-->
+
+
+
+    <!--================picture_styles======================-->
+    <!--图片选择的主题，注意每一项都不能少-->
+    <style name="XUIPictureStyle" parent="XUITheme.Phone">
+        <!-- Customize your theme here. -->
+        <!--标题栏背景色-->
+        <item name="colorPrimary">?attr/colorAccent</item>
+        <!--状态栏背景色-->
+        <item name="colorPrimaryDark">?attr/colorAccent</item>
+        <!--是否改变图片列表界面状态栏字体颜色为黑色-->
+        <item name="picture_statusFontColor">false</item>
+        <!--返回键图标-->
+        <item name="picture_leftBack_icon">@drawable/xui_ic_navigation_back_white</item>
+        <!--title图标文字的padding-->
+        <item name="picture_title_action_padding">?attr/xui_actionbar_side_text_padding</item>
+        <!--标题下拉箭头-->
+        <item name="picture_arrow_down_icon">@drawable/pic_arrow_down</item>
+        <!--标题上拉箭头-->
+        <item name="picture_arrow_up_icon">@drawable/pic_arrow_up</item>
+        <!--标题文字颜色-->
+        <item name="picture_title_textColor">?attr/xui_actionbar_text_color</item>
+        <!--标题栏右边文字-->
+        <item name="picture_right_textColor">?attr/xui_actionbar_text_color</item>
+        <!--标题文字大小-->
+        <item name="picture_title_textSize">?attr/xui_actionbar_title_text_size</item>
+        <!--标题栏右边文字大小-->
+        <item name="picture_right_textSize">?attr/xui_actionbar_action_text_size</item>
+        <!--标题文字是否加粗-->
+        <item name="picture_title_text_bold">false</item>
+        <!--标题栏右边文字是否加粗-->
+        <item name="picture_right_text_bold">false</item>
+        <!--图片列表勾选样式-->
+        <item name="picture_checked_style">@drawable/xui_icon_checkbox</item>
+        <!--开启图片列表勾选数字模式,开启的话勾选样式要换-->
+        <item name="picture_style_checkNumMode">false</item>
+        <!--选择图片样式0/9-->
+        <item name="picture_style_numComplete">false</item>
+        <!--图片列表底部背景色-->
+        <item name="picture_bottom_bg">@color/color_f4</item>
+        <!--图片列表预览文字颜色-->
+        <item name="picture_preview_textColor">@color/picture_tab_text_color</item>
+        <!--图片列表已完成文字颜色-->
+        <item name="picture_complete_textColor">@color/picture_tab_text_color</item>
+        <!--图片已选数量圆点背景色-->
+        <item name="picture_num_style">@drawable/picture_dot_oval</item>
+        <!--预览界面标题栏背景色-->
+        <item name="picture_ac_preview_title_bg">?attr/colorAccent</item>
+        <!--预览界面标题文字颜色-->
+        <item name="picture_ac_preview_title_textColor">?attr/xui_actionbar_text_color</item>
+        <!--预览界面标题文字大小-->
+        <item name="picture_ac_preview_title_textSize">?attr/xui_actionbar_title_text_size</item>
+        <!--预览界面标题文字是否加粗-->
+        <item name="picture_ac_preview_title_text_bold">false</item>
+        <!--预览界面已完成文字颜色-->
+        <item name="picture_ac_preview_complete_textColor">@color/picture_tab_text_color</item>
+        <!--预览界面底部背景色-->
+        <item name="picture_ac_preview_bottom_bg">@color/color_f4</item>
+        <!--预览界面返回箭头-->
+        <item name="picture_preview_leftBack_icon">@drawable/xui_ic_navigation_back_white</item>
+        <!--裁剪页面标题背景色-->
+        <item name="picture_crop_toolbar_bg">?attr/colorAccent</item>
+        <!--裁剪页面状态栏颜色-->
+        <item name="picture_crop_status_color">?attr/colorAccent</item>
+        <!--裁剪页面标题文字颜色-->
+        <item name="picture_crop_title_color">?attr/xui_actionbar_text_color</item>
+        <!--相册文件夹列表选中图标-->
+        <item name="picture_folder_checked_dot">@drawable/picture_dot_oval</item>
+    </style>
+
+    <!--图片选择的主题，注意每一项都不能少-->
+    <style name="XUIPictureStyle.Custom">
+        <item name="colorAccent">@color/custom_color_main_theme</item>
+        <!--应用的主要色调，actionBar默认使用该颜色，Toolbar导航栏的底色-->
+        <item name="colorPrimary">@color/custom_color_main_theme</item>
+        <!--应用的主要暗色调，statusBarColor默认使用该颜色-->
+        <item name="colorPrimaryDark">@color/custom_color_main_theme</item>
+        <item name="colorControlNormal">@color/xui_config_color_control_normal</item>
+
+        <!--图片列表勾选样式-->
+        <item name="picture_checked_style">@drawable/custom_icon_checkbox</item>
+    </style>
+
+    <!--*********************************************
+    *                SuperButtonStyle               *
+    **********************************************-->
+    <!-- Button style -->
+    <style name="SuperButton" parent="ButtonStyle">
+        <item name="sCornersRadius">?attr/xui_btn_view_radius</item>
+        <item name="sSelectorDisableColor">?attr/xui_btn_view_disable_color</item>
+        <item name="sUseSelector">true</item>
+        <item name="sGravity">center</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- IconButton style -->
+    <style name="SuperButton.Icon">
+        <item name="sGravity">left</item>
+        <item name="android:drawablePadding">?attr/xui_config_icon_drawable_padding</item>
+    </style>
+
+    <style name="SuperButton.Primary">
+        <item name="sSelectorNormalColor">?attr/colorAccent</item>
+        <item name="sSelectorPressedColor">?attr/colorAccent</item>
+    </style>
+
+    <style name="SuperButton.Primary.wrap">
+        <item name="android:paddingStart">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingEnd">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- Green Button Style -->
+    <style name="SuperButton.Green">
+        <item name="sSelectorNormalColor">@color/xui_btn_green_normal_color</item>
+        <item name="sSelectorPressedColor">@color/xui_btn_green_select_color</item>
+        <item name="android:text">@string/xui_lab_button_submit</item>
+    </style>
+
+    <!-- Green Icon Button Style -->
+    <style name="SuperButton.Green.Icon">
+        <item name="sGravity">left</item>
+        <item name="android:drawablePadding">?attr/xui_config_icon_drawable_padding</item>
+    </style>
+
+    <!-- Blue Button Style -->
+    <style name="SuperButton.Blue">
+        <item name="sSelectorNormalColor">@color/xui_btn_blue_normal_color</item>
+        <item name="sSelectorPressedColor">@color/xui_btn_blue_select_color</item>
+        <item name="android:text">@string/xui_lab_button_reset</item>
+    </style>
+
+    <!-- Blue Icon Button Style -->
+    <style name="SuperButton.Blue.Icon">
+        <item name="sGravity">left</item>
+        <item name="android:drawablePadding">?attr/xui_config_icon_drawable_padding</item>
+    </style>
+
+    <!-- Gray Button Style -->
+    <style name="SuperButton.Gray">
+        <item name="sSelectorNormalColor">@color/xui_btn_gray_normal_color</item>
+        <item name="sSelectorPressedColor">@color/xui_btn_gray_select_color</item>
+        <item name="android:text">@string/xui_lab_button_cancel</item>
+    </style>
+
+    <!-- Gray Icon Button Style -->
+    <style name="SuperButton.Gray.Icon">
+        <item name="sGravity">left</item>
+        <item name="android:drawablePadding">?attr/xui_config_icon_drawable_padding</item>
+    </style>
+
+
+    <!-- *******************************************组件样式***********************************************************-->
+    <!--*********************************************
+     *                  DialogTheme                  *
+     **********************************************-->
+    <!-- Base Dialog -->
+    <style name="XUIDialog" parent="@android:style/Theme.Dialog">
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- loading加载框样式 -->
+    <style name="Dialog.Loading.Big_Tablet" parent="XUIDialog">
+        <item name="xui_dialog_radius_size">@dimen/xui_dialog_radius_size_tablet_big</item>
+        <item name="xui_dialog_loading_padding_size">
+            @dimen/xui_dialog_loading_padding_size_tablet_big
+        </item>
+        <item name="xui_dialog_loading_min_size">@dimen/xui_dialog_loading_min_size_tablet_big
+        </item>
+        <item name="xui_loading_view_size">@dimen/xui_loading_view_size_tablet_big</item>
+        <item name="xui_loading_view_width">@dimen/xui_loading_view_width_tablet_big</item>
+        <item name="xui_loading_margin_size">@dimen/xui_loading_margin_size_tablet_big</item>
+    </style>
+
+    <!-- loading加载框样式 -->
+    <style name="Dialog.Loading.Small_Tablet" parent="XUIDialog">
+        <item name="xui_dialog_radius_size">@dimen/xui_dialog_radius_size_tablet_small</item>
+        <item name="xui_dialog_loading_padding_size">
+            @dimen/xui_dialog_loading_padding_size_tablet_small
+        </item>
+        <item name="xui_dialog_loading_min_size">@dimen/xui_dialog_loading_min_size_tablet_small
+        </item>
+        <item name="xui_loading_view_size">@dimen/xui_loading_view_size_tablet_small</item>
+        <item name="xui_loading_view_width">@dimen/xui_loading_view_width_tablet_small</item>
+        <item name="xui_loading_margin_size">@dimen/xui_loading_margin_size_tablet_small</item>
+    </style>
+
+    <!-- loading加载框样式 -->
+    <style name="Dialog.Loading.Phone" parent="XUIDialog">
+        <item name="xui_dialog_radius_size">@dimen/xui_dialog_radius_size_phone</item>
+        <item name="xui_dialog_loading_padding_size">@dimen/xui_dialog_loading_padding_size_phone
+        </item>
+        <item name="xui_dialog_loading_min_size">@dimen/xui_dialog_loading_min_size_phone</item>
+        <item name="xui_loading_view_size">@dimen/xui_loading_view_size_phone</item>
+        <item name="xui_loading_view_width">@dimen/xui_loading_view_width_phone</item>
+        <item name="xui_loading_margin_size">@dimen/xui_loading_margin_size_phone</item>
+    </style>
+
+    <!--自定义弹窗样式-->
+    <style name="XUIDialog.Custom">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">?attr/xui_dialog_background_dim_amount</item>
+    </style>
+
+    <!--自定义弹窗样式-->
+    <style name="XUIDialog.Custom.MiniLoading">
+        <!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">0</item>
+    </style>
+
+    <!--*********************************************
+    *                 TextStyle                     *
+    **********************************************-->
+    <style name="TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="fontPath">@string/default_app_font_path</item>
+    </style>
+
+    <!-- 标题 style -->
+    <style name="TextStyle.Title">
+        <item name="android:textSize">?attr/xui_config_size_title_text</item>
+        <item name="android:textColor">?attr/xui_config_color_title_text</item>
+    </style>
+
+    <!-- 标题 style -->
+    <style name="TextStyle.Title.wrap">
+        <item name="android:layout_marginBottom">?attr/xui_config_content_spacing_horizontal</item>
+    </style>
+
+    <!-- 内容 style -->
+    <style name="TextStyle.Content">
+        <item name="android:textSize">?attr/xui_config_size_content_text</item>
+        <item name="android:textColor">?attr/xui_config_color_content_text</item>
+    </style>
+
+    <!-- 内容 style -->
+    <style name="TextStyle.Content.wrap">
+        <item name="android:layout_marginBottom">?attr/xui_config_content_spacing_vertical</item>
+    </style>
+
+    <!-- 辅助说明 style -->
+    <style name="TextStyle.Explain">
+        <item name="android:textSize">?attr/xui_config_size_explain_text</item>
+        <item name="android:textColor">?attr/xui_config_color_explain_text</item>
+    </style>
+
+    <!--*********************************************
+   *                  条目样式                     *
+   **********************************************-->
+    <!-- ListView Start -->
+    <style name="ListView.Tablet" parent="ListViewBase">
+        <item name="android:dividerHeight">@dimen/xui_list_divider_height_table</item>
+        <item name="android:divider">@color/xui_config_color_separator_dark_tablet</item>
+    </style>
+
+    <style name="ListView.Phone" parent="ListViewBase">
+        <item name="android:dividerHeight">@dimen/xui_list_divider_height_phone</item>
+        <item name="android:divider">@color/xui_config_color_separator_dark_phone</item>
+    </style>
+    <!-- ListView End -->
+
+    <!-- GridView -->
+    <style name="GridView" parent="GridViewBase">
+        <item name="android:background">@color/xui_config_color_transparent</item>
+        <item name="android:listSelector">@drawable/xui_config_selectable_item_selector</item>
+    </style>
+
+    <!--*********************************************
+    *                 EditTextStyle                 *
+    **********************************************-->
+    <!--基础输入框样式-->
+    <style name="EditText" parent="EditTextBase">
+        <item name="android:layout_height">?attr/xui_config_size_edittext_height</item>
+        <item name="android:textSize">?attr/xui_config_size_edittext_input_text</item>
+        <item name="android:paddingStart">?attr/xui_config_size_edittext_left_padding</item>
+        <item name="android:paddingEnd">?attr/xui_config_size_edittext_left_padding</item>
+        <item name="android:textColor">?attr/xui_config_color_input_text</item>
+        <item name="android:textColorHint">?attr/xui_config_color_hint_text</item>
+        <item name="android:singleLine">true</item>
+        <!--华为手机光标问题解决-->
+        <item name="android:imeOptions">normal</item>
+    </style>
+
+    <style name="EditText.Normal">
+        <item name="android:background">@drawable/xui_config_bg_edittext</item>
+    </style>
+
+    <!--================xui_styles_widget======================-->
+    <!--*********************************************
+         *                  MaterialDialog               *
+         **********************************************-->
+    <style name="MD_ActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">?attr/md_button_height</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="MD_ActionButton.Text" tools:ignore="NewApi">
+        <item name="android:textSize">?attr/md_button_textsize</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:minWidth">@dimen/md_button_min_width</item>
+        <item name="android:paddingLeft">@dimen/md_button_textpadding_horizontal</item>
+        <item name="android:paddingRight">@dimen/md_button_textpadding_horizontal</item>
+    </style>
+
+    <style name="MD_Light" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="md_divider">@color/md_divider_black</item>
+        <item name="md_list_selector">@drawable/md_selector</item>
+        <item name="md_btn_stacked_selector">@drawable/md_selector</item>
+        <item name="md_btn_positive_selector">@drawable/md_btn_selector</item>
+        <item name="md_btn_neutral_selector">@drawable/md_btn_selector</item>
+        <item name="md_btn_negative_selector">@drawable/md_btn_selector</item>
+
+        <item name="android:windowAnimationStyle">@style/MD_WindowAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
+    <style name="MD_Dark" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="md_divider">@color/md_divider_white</item>
+        <item name="md_list_selector">@drawable/md_selector_dark</item>
+        <item name="md_btn_stacked_selector">@drawable/md_selector_dark</item>
+        <item name="md_btn_positive_selector">@drawable/md_btn_selector_dark</item>
+        <item name="md_btn_neutral_selector">@drawable/md_btn_selector_dark</item>
+        <item name="md_btn_negative_selector">@drawable/md_btn_selector_dark</item>
+
+        <item name="android:windowAnimationStyle">@style/MD_WindowAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
+    <style name="MD_WindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/md_popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/md_popup_exit</item>
+    </style>
+
+
+    <!--*********************************************
+    *                 PopupWindow Style             *
+    **********************************************-->
+    <style name="XUI.Animation" parent="@android:style/Animation" />
+
+    <style name="XUI.Animation.PopUpMenu" />
+
+    <style name="XUI.Animation.PopUpMenu.Center">
+        <item name="android:windowEnterAnimation">@anim/pop_grow_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/pop_shrink_from_top</item>
+    </style>
+
+    <style name="XUI.Animation.PopUpMenu.Left">
+        <item name="android:windowEnterAnimation">@anim/pop_grow_from_bottomleft_to_topright</item>
+        <item name="android:windowExitAnimation">@anim/pop_shrink_from_topright_to_bottomleft</item>
+    </style>
+
+    <style name="XUI.Animation.PopUpMenu.Right">
+        <item name="android:windowEnterAnimation">@anim/pop_grow_from_bottomright_to_topleft</item>
+        <item name="android:windowExitAnimation">@anim/pop_shrink_from_topleft_to_bottomright</item>
+    </style>
+
+    <style name="XUI.Animation.PopDownMenu" />
+
+    <style name="XUI.Animation.PopDownMenu.Center">
+        <item name="android:windowEnterAnimation">@anim/pop_grow_from_top</item>
+        <item name="android:windowExitAnimation">@anim/pop_shrink_from_bottom</item>
+    </style>
+
+    <style name="XUI.Animation.PopDownMenu.Left">
+        <item name="android:windowEnterAnimation">@anim/pop_grow_from_topleft_to_bottomright</item>
+        <item name="android:windowExitAnimation">@anim/pop_shrink_from_bottomright_to_topleft</item>
+    </style>
+
+    <style name="XUI.Animation.PopDownMenu.Right">
+        <item name="android:windowEnterAnimation">@anim/pop_grow_from_topright_to_bottomleft</item>
+        <item name="android:windowExitAnimation">@anim/pop_shrink_from_bottomleft_to_topright</item>
+    </style>
+
+    <!--EditSpinner-->
+    <style name="EditSpinner" parent="EditText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">?attr/ms_item_height_size</item>
+        <item name="android:textSize">?attr/xui_config_size_spinner_text</item>
+        <item name="android:textColor">@color/xui_config_color_edittext_textcolor</item>
+        <item name="android:background">@drawable/xui_config_bg_edittext</item>
+    </style>
+
+
+    <!--*********************************************
+    *                Spinner                        *
+    **********************************************-->
+    <style name="Material.SpinnerStyle" parent="@style/Widget.AppCompat.Spinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">?attr/ms_item_height_size</item>
+        <item name="android:textSize">?attr/xui_config_size_spinner_text</item>
+        <item name="android:textColor">@color/xui_config_color_edittext_textcolor</item>
+        <item name="ms_dropdown_height">wrap_content</item>
+        <item name="ms_text_color">@color/ms_dropdown_item_textcolor</item>
+        <item name="ms_background_selector">@drawable/xui_config_bg_edittext</item>
+        <item name="ms_dropdown_bg">@drawable/ms_drop_down_bg_radius</item>
+    </style>
+
+    <!--系统默认Spinner样式-->
+    <style name="SpinnerStyle" parent="@style/Widget.AppCompat.Spinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">?attr/ms_item_height_size</item>
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:background">@drawable/xui_config_bg_spinner</item>
+        <item name="android:popupBackground">@drawable/ms_drop_down_bg_radius</item>
+        <item name="android:paddingRight">@dimen/default_spinner_icon_padding_size</item>
+    </style>
+
+    <!--*********************************************
+    *                  GuideCaseView                *
+    **********************************************-->
+    <style name="DefaultGuideCaseTitleStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textAppearance">@style/TextAppearance.FontPath</item>
+    </style>
+
+    <!--*********************************************
+    *            Common Widget Style                *
+    **********************************************-->
+    <!-- 提示更新小圆点 -->
+    <style name="XUITipPoint">
+        <item name="android:layout_width">@dimen/xui_tips_point_size</item>
+        <item name="android:layout_height">@dimen/xui_tips_point_size</item>
+        <item name="android:background">@drawable/xui_tips_point</item>
+    </style>
+
+    <!-- 提示更新new -->
+    <style name="XUITipNew">
+        <item name="android:layout_width">37dp</item>
+        <item name="android:layout_height">17dp</item>
+        <item name="android:background">@drawable/xui_icon_tip_new</item>
+    </style>
+
+    <style name="XUIGroupListView">
+        <item name="xui_separatorStyle">normal</item>
+    </style>
+
+    <style name="XUICommonListItemView">
+        <item name="android:paddingLeft">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingRight">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:background">?attr/xui_list_item_bg_with_border_none_selector</item>
+        <item name="xui_commonList_titleColor">@color/xui_config_color_gray_1</item>
+        <item name="xui_commonList_detailColor">@color/xui_config_color_gray_5</item>
+    </style>
+
+    <style name="XUIGroupListSectionView">
+        <item name="android:paddingLeft">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingRight">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingTop">
+            @dimen/xui_group_list_section_header_footer_padding_vertical
+        </item>
+        <item name="android:paddingBottom">
+            @dimen/xui_group_list_section_header_footer_padding_vertical
+        </item>
+    </style>
+
+    <!-- RadiusImageView -->
+    <style name="RadiusImageView">
+        <item name="riv_border_width">0dp</item>
+        <item name="riv_border_color">@color/xui_config_color_gray_4</item>
+        <item name="riv_is_touch_select_mode_enabled">true</item>
+    </style>
+
+    <!-- TabSegment -->
+    <style name="TabSegment">
+        <item name="ts_selected_color">?attr/colorAccent</item>
+        <item name="ts_normal_color">@color/xui_config_color_gray_5</item>
+        <item name="ts_has_indicator">true</item>
+        <item name="ts_indicator_height">@dimen/xui_tab_segment_indicator_height</item>
+        <item name="android:textSize">@dimen/xui_tab_segment_text_size</item>
+        <item name="ts_indicator_top">false</item>
+        <item name="ts_icon_position">left</item>
+    </style>
+
+    <style name="TabSegment_CountView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">?attr/xui_tab_sign_count_view_minSize</item>
+        <item name="android:background">?attr/xui_tab_sign_count_view_bg</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/xui_config_color_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingLeft">?attr/xui_tab_sign_count_view_padding_horizontal</item>
+        <item name="android:paddingRight">?attr/xui_tab_sign_count_view_padding_horizontal</item>
+        <item name="android:minWidth">?attr/xui_tab_sign_count_view_minSize</item>
+        <item name="android:minHeight">?attr/xui_tab_sign_count_view_minSize</item>
+    </style>
+
+    <!-- PickerView -->
+    <style name="picker_view_scale_anim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/picker_view_dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/picker_view_dialog_scale_out</item>
+    </style>
+
+    <style name="picker_view_slide_anim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/picker_view_slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/picker_view_slide_out_bottom</item>
+    </style>
+
+    <!-- RulerView -->
+    <style name="RulerView">
+        <item name="rv_rulerHeight">50dp</item>
+        <item name="rv_rulerToResultGap">30dp</item>
+        <item name="rv_scaleGap">10dp</item>
+        <item name="rv_scaleLimit">1</item>
+        <item name="rv_scaleCount">10</item>
+
+        <item name="rv_bgColor">@color/default_ruler_view_bg_color</item>
+        <item name="rv_smallScaleColor">@color/default_ruler_view_small_scale_color</item>
+        <item name="rv_midScaleColor">@color/default_ruler_view_mid_scale_color</item>
+        <item name="rv_largeScaleColor">@color/default_ruler_view_large_scale_color</item>
+        <item name="rv_scaleNumColor">@color/default_ruler_view_scale_num_color</item>
+        <item name="rv_resultNumColor">@color/default_ruler_view_result_num_color</item>
+        <item name="rv_unitColor">@color/default_ruler_view_unit_color</item>
+
+        <item name="rv_smallScaleStroke">2dp</item>
+        <item name="rv_midScaleStroke">3dp</item>
+        <item name="rv_largeScaleStroke">5dp</item>
+
+        <item name="rv_resultNumTextSize">20sp</item>
+        <item name="rv_scaleNumTextSize">16sp</item>
+        <item name="rv_unitTextSize">13sp</item>
+
+        <item name="rv_showScaleResult">true</item>
+        <item name="rv_isBgRoundRect">true</item>
+        <item name="rv_roundRadius">10dp</item>
+    </style>
+
+    <!-- VerifyCodeEditText -->
+    <style name="VerifyCodeEditText">
+        <item name="vcet_number">4</item>
+        <item name="vcet_width">@dimen/default_vcet_width</item>
+        <item name="vcet_divider">@drawable/vcet_shape_divider</item>
+        <item name="vcet_text_color">@color/xui_config_color_pure_black</item>
+        <item name="vcet_text_size">@dimen/default_vcet_text_size</item>
+        <item name="vcet_bg_focus">@drawable/vcet_shape_bg_focus</item>
+        <item name="vcet_bg_normal">@drawable/vcet_shape_bg_normal</item>
+        <item name="vcet_is_pwd">false</item>
+        <item name="vcet_pwd_radius">@dimen/default_vcet_pwd_radius</item>
+    </style>
+
+
+    <!--MaterialSearchView-->
+    <style name="MSV_ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:paddingLeft">?attr/search_icon_padding</item>
+        <item name="android:paddingRight">?attr/search_icon_padding</item>
+    </style>
+
+
+    <!--BottomSheet-->
+    <style name="BottomSheet" parent="android:Theme.Dialog">
+        <item name="android:backgroundDimAmount">?attr/xui_dialog_background_dim_amount</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null
+        </item><!-- 为了避免在有 NavigationBar 的手机上 Dialog 从 NavigationBar 底部上来。去掉 Dialog 的动画，使用 View 的动画。-->
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!--MiniLoadingView-->
+    <style name="MiniLoadingView">
+        <item name="mlv_loading_view_size">?attr/mini_loading_view_size</item>
+        <item name="mlv_loading_view_color">@color/xui_config_color_gray_5</item>
+    </style>
+
+    <!--SwitchButton-->
+    <style name="SwitchButtonMD">
+        <item name="swb_thumbDrawable">@drawable/swb_md_thumb</item>
+        <item name="swb_backColor">@color/swb_md_back_color</item>
+        <item name="swb_thumbRangeRatio">1.5</item>
+        <item name="swb_thumbMarginLeft">-16dp</item>
+        <item name="swb_thumbMarginTop">-14dp</item>
+        <item name="swb_thumbMarginRight">-16dp</item>
+        <item name="swb_thumbMarginBottom">-14dp</item>
+        <item name="swb_thumbWidth">@dimen/swb_md_thumb_ripple_size</item>
+        <item name="swb_thumbHeight">@dimen/swb_md_thumb_ripple_size</item>
+    </style>
+
+    <!--BottomSheet-->
+    <style name="BottomSheetTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/xui_bottom_sheet_title_height</item>
+        <item name="android:background">?attr/xui_bottom_sheet_title_bg</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">?attr/xui_bottom_sheet_list_item_padding_horizontal</item>
+        <item name="android:paddingRight">?attr/xui_bottom_sheet_list_item_padding_horizontal</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="BottomSheetListItemTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="BottomSheetTitleStyle.Center">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BottomSheetListItemTextStyle.Center">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--CircleProgressView-->
+    <style name="CircleProgressView">
+        <item name="cpv_start_progress">0</item>
+        <item name="cpv_end_progress">60</item>
+        <item name="cpv_start_color">@color/xui_config_color_light_orange</item>
+        <item name="cpv_end_color">@color/xui_config_color_dark_orange</item>
+        <item name="cpv_isTracked">false</item>
+        <item name="cpv_track_width">@dimen/default_pv_trace_width</item>
+        <item name="cpv_track_color">@color/default_pv_track_color</item>
+        <item name="cpv_progress_duration">1200</item>
+        <item name="cpv_progress_textVisibility">true</item>
+        <item name="cpv_progress_textColor">?attr/colorAccent</item>
+        <item name="cpv_progress_textSize">@dimen/default_pv_progress_text_size</item>
+        <item name="cpv_animate_type">AccelerateDecelerateInterpolator</item>
+        <item name="cpv_isFilled">false</item>
+        <item name="cpv_circle_broken">true</item>
+        <item name="cpv_isGraduated">false</item>
+        <item name="cpv_scaleZone_width">@dimen/default_pv_zone_width</item>
+        <item name="cpv_scaleZone_length">@dimen/default_pv_zone_length</item>
+        <item name="cpv_scaleZone_corner_radius">@dimen/default_pv_zone_corner_radius</item>
+        <item name="cpv_scaleZone_padding">@dimen/default_pv_zone_padding</item>
+    </style>
+
+    <!--HorizontalProgressView-->
+    <style name="HorizontalProgressView">
+        <item name="hpv_start_progress">0</item>
+        <item name="hpv_end_progress">60</item>
+        <item name="hpv_start_color">@color/xui_config_color_light_orange</item>
+        <item name="hpv_end_color">@color/xui_config_color_dark_orange</item>
+        <item name="hpv_isTracked">false</item>
+        <item name="hpv_track_width">@dimen/default_pv_trace_width</item>
+        <item name="hpv_track_color">@color/default_pv_track_color</item>
+        <item name="hpv_progress_duration">1200</item>
+        <item name="hpv_progress_textVisibility">true</item>
+        <item name="hpv_progress_textColor">?attr/colorAccent</item>
+        <item name="hpv_progress_textSize">@dimen/default_pv_progress_text_size</item>
+        <item name="hpv_animate_type">AccelerateDecelerateInterpolator</item>
+        <item name="hpv_corner_radius">@dimen/default_pv_corner_radius</item>
+        <item name="hpv_text_padding_bottom">@dimen/default_pv_corner_radius</item>
+        <item name="hpv_text_movedEnable">true</item>
+    </style>
+
+    <style name="EditText.Clear">
+        <item name="cet_clearIcon">@drawable/xui_ic_default_clear_btn</item>
+        <item name="cet_clearIconSize">21dp</item>
+    </style>
+
+    <style name="EditText.Password">
+        <item name="pet_iconShow">@drawable/pet_icon_visibility_24dp</item>
+        <item name="pet_iconHide">@drawable/pet_icon_visibility_off_24dp</item>
+        <item name="pet_hoverShowsPw">false</item>
+        <item name="pet_nonMonospaceFont">false</item>
+        <item name="pet_enableIconAlpha">true</item>
+    </style>
+
+    <style name="EditText.Material">
+        <item name="android:paddingLeft">0dp</item>
+
+        <item name="met_textColor">?attr/xui_config_color_input_text</item>
+        <item name="met_textColorHint">?attr/xui_config_color_hint_text</item>
+        <item name="met_underlineColor">?attr/xui_config_color_stroke</item>
+        <item name="met_errorColor">?attr/xui_config_color_error_text</item>
+        <item name="met_helperTextColor">?attr/xui_config_color_error_text</item>
+
+        <item name="met_floatingLabelTextSize">?attr/xui_config_size_edittext_helper_text</item>
+        <item name="met_bottomTextSize">?attr/xui_config_size_edittext_helper_text</item>
+
+        <item name="met_floatingLabelPadding">?attr/xui_config_size_edittext_components_spacing
+        </item>
+    </style>
+
+    <style name="EditText.Validator">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+
+        <item name="android:background">@drawable/xui_config_bg_edittext</item>
+        <item name="vet_autoValidate">true</item>
+        <item name="vet_show_errorIcon">true</item>
+        <item name="vet_errorIcon">@drawable/xui_ic_default_tip_btn</item>
+        <item name="vet_errorIconSize">21dp</item>
+        <item name="vet_tipPosition">top</item>
+    </style>
+
+    <style name="EasyIndicator">
+        <item name="indicator_width">0dp</item>
+        <item name="indicator_height">45dp</item>
+        <item name="indicator_textSize">14sp</item>
+        <item name="indicator_select_textSize">14sp</item>
+        <item name="indicator_selected_color">?attr/colorAccent</item>
+        <item name="indicator_normal_color">@color/xui_config_color_black</item>
+        <item name="indicator_line_show">true</item>
+        <item name="indicator_line_height">3dp</item>
+        <item name="indicator_line_color">?attr/colorAccent</item>
+        <item name="indicator_bottom_line_color">?attr/xui_config_color_separator_dark</item>
+        <item name="indicator_bottom_line_height">0dp</item>
+        <item name="indicator_vertical_line_w">0dp</item>
+        <item name="indicator_vertical_line_h">0dp</item>
+        <item name="indicator_vertical_line_color">?attr/xui_config_color_separator_dark</item>
+    </style>
+
+    <style name="MultipleStatusView">
+        <item name="msv_loadingView">@layout/msv_loading_view</item>
+        <item name="msv_errorView">@layout/msv_error_view</item>
+        <item name="msv_emptyView">@layout/msv_empty_view</item>
+        <item name="msv_noNetworkView">@layout/msv_no_network_view</item>
+    </style>
+
+    <style name="StatefulLayout">
+        <item name="stf_animationEnabled">true</item>
+        <item name="stf_inAnimation">@android:anim/fade_in</item>
+        <item name="stf_outAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="TitleBar">
+        <item name="tb_barHeight">?attr/xui_actionbar_height</item>
+        <item name="tb_immersive">?attr/xui_actionbar_immersive</item>
+        <item name="tb_actionPadding">?attr/xui_actionbar_action_padding</item>
+        <item name="tb_sideTextPadding">?attr/xui_actionbar_side_text_padding</item>
+        <item name="tb_sideTextColor">?attr/xui_actionbar_text_color</item>
+        <item name="tb_titleTextColor">?attr/xui_actionbar_text_color</item>
+        <item name="tb_subTitleTextColor">?attr/xui_actionbar_text_color</item>
+        <item name="tb_actionTextColor">?attr/xui_actionbar_text_color</item>
+        <item name="tb_sideTextSize">?attr/xui_actionbar_action_text_size</item>
+        <item name="tb_titleTextSize">?attr/xui_actionbar_title_text_size</item>
+        <item name="tb_subTitleTextSize">?attr/xui_actionbar_sub_text_size</item>
+        <item name="tb_actionTextSize">?attr/xui_actionbar_action_text_size</item>
+        <item name="tb_leftImageResource">?attr/xui_actionbar_ic_navigation_back</item>
+        <item name="tb_dividerColor">@color/xui_config_color_transparent</item>
+        <item name="tb_dividerHeight">1dp</item>
+        <item name="tb_useThemeColor">true</item>
+    </style>
+
+    <style name="CountDownButton">
+        <item name="cdbt_countDownFormat">%ds</item>
+        <item name="cdbt_countDown">60000</item>
+        <item name="cdbt_countDownInterval">1000</item>
+        <item name="cdbt_enableCountDown">true</item>
+    </style>
+
+    <style name="AutoFitTextView">
+        <item name="aftv_enable">true</item>
+        <item name="aftv_minTextSize">8sp</item>
+        <item name="aftv_precision">0.5</item>
+    </style>
+
+    <style name="RippleView">
+        <item name="rv_alpha">90</item>
+        <item name="rv_frameRate">10</item>
+        <item name="rv_rippleDuration">400</item>
+        <item name="rv_color">@color/xui_config_color_white</item>
+        <item name="rv_centered">false</item>
+        <item name="rv_type">simpleRipple</item>
+        <item name="rv_ripplePadding">0dp</item>
+        <item name="rv_zoom">false</item>
+        <item name="rv_zoomScale">1.03</item>
+        <item name="rv_zoomDuration">200</item>
+    </style>
+
+    <style name="StatusView">
+        <item name="sv_dismissOnComplete">true</item>
+    </style>
+
+    <style name="BannerLayout">
+        <item name="bl_interval">4000</item>
+        <item name="bl_showIndicator">true</item>
+        <item name="bl_orientation">horizontal</item>
+        <item name="bl_autoPlaying">true</item>
+        <item name="bl_indicatorSize">@dimen/default_recycler_banner_indicatorSize</item>
+        <item name="bl_indicatorSelectedColor">@color/xui_config_color_red</item>
+        <item name="bl_indicatorUnselectedColor">@color/xui_config_color_gray_2</item>
+        <item name="bl_indicatorSpace">@dimen/default_recycler_banner_indicatorSpace</item>
+        <item name="bl_indicatorMarginLeft">@dimen/default_recycler_banner_indicatorMarginLeft
+        </item>
+        <item name="bl_indicatorMarginRight">@dimen/default_recycler_banner_indicatorMarginRight
+        </item>
+        <item name="bl_indicatorMarginBottom">@dimen/default_recycler_banner_indicatorMarginBottom
+        </item>
+        <item name="bl_indicatorGravity">left</item>
+        <item name="bl_itemSpace">@dimen/default_recycler_banner_itemSpace</item>
+        <item name="bl_centerScale">1.2</item>
+        <item name="bl_moveSpeed">1.0</item>
+    </style>
+
+
+    <!--    &lt;!&ndash;窗体背景，这个背景能在第一时间显示, 避免启动时白屏，黑屏问题&ndash;&gt;-->
+    <!--    <style name="XUITheme.Launch.App">-->
+    <!--        <item name="android:windowBackground">@drawable/xui_config_bg_splash</item>-->
+    <!--        &lt;!&ndash;注意修改图标&ndash;&gt;-->
+    <!--        <item name="xui_config_splash_app_logo">@drawable/logo_kky</item>-->
+    <!--        <item name="xui_config_splash_company_logo">@drawable/logo_kky</item>-->
+    <!--    </style>-->
+
+    <!--DialogTheme，用于将Activity作为Dialog的主题-->
+    <style name="DialogTheme2" parent="XUITheme.Phone">
+        <!--设置dialog的背景，此处为系统给定的透明值-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>　　　　　
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--是否有覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--设置Activity出现方式-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <!--放一些组件的样式-->
+
+
+    <!-- 默认圆角按钮样式 -->
+    <style name="ButtonStyleCorner" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white90</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_button</item>
+        <item name="android:foreground">@null</item>
+    </style>
+
+
+    <style name="RadiusImage">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="riv_border_width">0dp</item>
+        <item name="riv_corner_radius">5dp</item>
+    </style>
+
+    <style name="PullDownStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="srlEnableOverScrollDrag">true</item>
+        <item name="srlEnablePureScrollMode">true</item>
+    </style>
+
+    <style name="ScrollViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+
+
+</resources>
+

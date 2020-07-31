@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".common.view.fragment.DataFragment"
+    tools:ignore="HardcodedText">
+
+
+    <com.hjq.bar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backButton="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/icon_padding">
+
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:sCenterTextIsBold="true"
+                app:sCenterTextSize="@dimen/font_normal"
+                app:sCenterTextString="@string/kky_titile_mydatahealth"
+                app:sCenterViewGravity="center"
+                app:sUseRipple="false" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="5dp"
+                android:id="@+id/tv_data_edit"
+                android:gravity="center"
+                android:text="@string/kky_edit"
+                android:textColor="@color/icon_blue"
+                android:textSize="@dimen/font_normal"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.hjq.bar.TitleBar>
+
+
+    <include layout="@layout/include_recycler_view_refresh" />
+
+
+
+</LinearLayout>

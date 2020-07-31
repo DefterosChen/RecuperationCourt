@@ -1,0 +1,221 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kyy.recuperationcourt">
+
+    <!--允许程序打开网络套接字-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序设置内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问WiFi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <!-- umeng用权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 外部存储读写权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 联网权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- GPS权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 百度地图需要的其它权限 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 读写sd卡 -->
+    <!--    <uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+    <!-- 写sd卡 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!-- 获取精确gps位置 -->
+    <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!-- 允许程序访问额外的定位提供者指令获取模拟定位信息 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 网络链接 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 更改wifi连状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-permission android:name=".common.base.utils.Receiver" />
+    <permission
+        android:name=".common.base.utils.Receiver">
+    </permission>
+
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+        android:exported="true"
+        android:icon="@drawable/logo_kky"
+        android:label="@string/app_name"
+        android:maxAspectRatio="2.4"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:persistent="true"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:roundIcon="@drawable/logo_kky"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/CustomAppTheme"
+        android:windowSoftInputMode="adjustPan|stateHidden"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+
+        <!-- 暂时无用 -->
+        <receiver android:name=".common.broadcast.MyBroadcastReceiver"
+            android:label="@string/app_name">
+            <intent-filter>
+                <!-- 应用安装了 -->
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <!-- 应用卸载了 -->
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <!-- 应用被覆盖了 -->
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <!-- 系统就是这样发送的，所以必须这样订阅 -->
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 高德地图-->
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="26579772925a5184e7eda16aa557874f"/>
+
+        <service android:name="com.amap.api.location.APSService"/>
+
+        <!-- ********************************* -->
+
+
+
+        <!--        &lt;!&ndash;定义百度地图的服务，用于定位&ndash;&gt;-->
+        <!--        <service-->
+        <!--            android:name="com.baidu.location.f"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="false"-->
+        <!--            android:process=":remote"></service>-->
+
+
+        <!--        <meta-data-->
+        <!--            android:name="com.baidu.lbsapi.API_KEY"-->
+        <!--            android:value="iTCRaKKnZGs4cI8xkKEljEr5id6EbFE1" />-->
+
+
+        <activity
+            android:name=".common.view.activity.WelcomeActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:theme="@style/XUITheme.Launch.Demo"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!--            <meta-data-->
+            <!--                android:name="android.app.shortcuts"-->
+            <!--                android:resource="@xml/shortcuts" />-->
+        </activity>
+
+
+        <activity android:name=".common.view.base.MyBaseActivity" />
+
+        <activity
+            android:name=".common.other.xui.view.TableActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".common.view.activity.MainActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:theme="@style/CityPickerTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" /> <!-- 屏幕自适应设计图 -->
+
+        <activity
+            android:name=".common.other.wheel.waterfall.collector.common.PhotoDetailActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+
+        <activity
+            android:name=".common.other.xui.view.AgentWebActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:hardwareAccelerated="true">
+            <!-- Scheme -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="com.xuexiang.xui.applink" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="about" />
+                <data android:scheme="javascript" />
+                <data
+                    android:host="xuexiangjys.club"
+                    android:scheme="xui" />
+            </intent-filter>
+            <!-- AppLink -->
+            <intent-filter
+                android:autoVerify="true"
+                tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="inline" />
+                <data android:mimeType="text/html" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/xhtml+xml" />
+                <data android:mimeType="application/vnd.wap.xhtml+xml" />
+                <data
+                    android:host="xuexiangjys.club"
+                    android:scheme="http" />
+                <data
+                    android:host="xuexiangjys.club"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+    </application>
+</manifest>

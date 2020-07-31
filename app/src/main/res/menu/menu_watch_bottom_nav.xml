@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/menu_share"
+        android:icon="@drawable/icon_kky_nav_home"
+        android:title="@string/kky_device_watch_home"/>
+
+    <item
+        android:id="@+id/menu_collect"
+        android:icon="@drawable/icon_kky_nav_heart"
+        android:title="@string/kky_device_watch_health"/>
+
+    <item
+        android:id="@+id/menu_edit"
+        android:icon="@drawable/icon_kky_nav_locate"
+        android:title="@string/kky_device_watch_location"
+        />
+
+    <item
+        android:id="@+id/menu_delete"
+        android:icon="@drawable/icon_kky_nav_mine"
+        android:title="@string/kky_device_watch_mine"/>
+
+    <item
+        android:id="@+id/menu_more"
+        android:icon="@drawable/icon_kky_nav_find"
+        android:title="@string/kky_device_watch_find"/>
+</menu>

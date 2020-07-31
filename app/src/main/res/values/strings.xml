@@ -1,0 +1,942 @@
+<resources>
+    <string name="app_name">康养苑</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 主页 -->
+    <string name="home_exit_hint">再按一次退出</string>
+    <string name="home_nav_home">首页</string>
+    <string name="home_nav_social">社交</string>
+    <string name="home_nav_data">数据</string>
+    <string name="home_nav_consult">咨询</string>
+    <string name="home_nav_shop">商城</string>
+    <string name="home_nav_mine">我的</string>
+    <string name="home_nav_device">设备</string>
+
+    <!-- 通用的 -->
+    <string name="common_phone_input_hint">输入手机号码</string>
+    <string name="common_phone_input_error">手机号输入不正确</string>
+    <string name="common_password_input_error">请输入密码</string>
+    <string name="common_code_input_pic">请输入图中验证码</string>
+    <string name="common_code_input_hint">输入验证码</string>
+    <string name="common_code_send">发送验证码</string>
+    <string name="common_code_send_hint">验证码已发送，请注意查收</string>
+    <string name="common_step_next">下一步</string>
+    <string name="common_step_complete">完成</string>
+    <string name="common_step_commit">提交</string>
+    <string name="common_permission_hint">请先授予权限</string>
+    <string name="common_permission_fail">授权失败，请手动授予权限</string>
+    <string name="common_loading">加载中…</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_year">年</string>
+    <string name="common_month">月</string>
+    <string name="common_day">日</string>
+    <string name="common_hour">时</string>
+    <string name="common_minute">分</string>
+    <string name="common_second">秒</string>
+    <!-- 地区对话框 -->
+    <string name="address_title">请选择地区</string>
+    <string name="address_hint">请选择</string>
+    <!-- 日期对话框 -->
+    <string name="date_title">请选择日期</string>
+    <!-- 时间对话框 -->
+    <string name="time_title">请选择时间</string>
+    <!-- 升级对话框 -->
+    <string name="update_app">升级</string>
+    <string name="update_download_fail">启动下载失败</string>
+    <string name="update_permission_hint">必须先要授予权限才能正常下载更新哦</string>
+    <string name="update_status_running">下载中</string>
+    <string name="update_status_successful">立即安装</string>
+    <string name="update_status_failed">下载失败</string>
+    <string name="update_status_paused">暂停中</string>
+    <string name="update_status_pending">等待下载</string>
+    <string name="update_no_update">当前已是最新版本</string>
+    <!-- 分享对话框 -->
+    <string name="share_title">分享到…</string>
+    <string name="share_platform_wechat">微信</string>
+    <string name="share_platform_moment">朋友圈</string>
+    <string name="share_platform_qq">QQ</string>
+    <string name="share_platform_qzone">QQ空间</string>
+    <string name="share_platform_link">复制链接</string>
+    <string name="share_platform_copy_hint">已复制到剪贴板</string>
+    <!-- 支付密码对话框 -->
+    <string name="pay_title">请输入支付密码</string>
+    <!-- 提示 -->
+    <string name="hint_layout_no_data">亲，暂无数据</string>
+    <string name="hint_layout_error_request">亲，请求出错了</string>
+    <string name="hint_layout_error_network">亲，没有网络了</string>
+    <!-- 登录 -->
+    <string name="login_register">注册</string>
+    <string name="login_forget">忘记密码？</string>
+    <string name="login_text">登录</string>
+    <string name="login_other">其他登录方式</string>
+    <string name="login_password">用账号密码登录</string>
+    <string name="login_vcode">短信验证码登录</string>
+
+    <!-- 注册 -->
+    <string name="register_title">注册</string>
+    <string name="register_hint">手机号仅用于登录和保护账号安全</string>
+    <string name="register_login">登录</string>
+    <string name="register_password_hint1">设置6–18位登录密码</string>
+    <string name="register_password_hint2">请再次输入一次密码</string>
+    <string name="register_password_input_error">两次密码输入不一致，请重新输入</string>
+    <string name="register_success">注册成功！请登录</string>
+    <!-- 设置 -->
+    <string name="setting_title">设置</string>
+    <string name="setting_language">语言切换</string>
+    <string name="setting_language_simple">简体中文</string>
+    <string name="setting_language_complex">繁体中文</string>
+    <string name="setting_update">检查更新</string>
+    <string name="setting_cache">清空缓存</string>
+    <string name="setting_auto">自动登录</string>
+    <string name="setting_agreement">隐私协议</string>
+    <string name="setting_about">关于我们</string>
+    <string name="setting_exit">退出登录</string>
+
+    <!-- 关于 -->
+    <string name="about_title">关于我们</string>
+    <string name="about_author">
+        <font color="#85b84f">Android</font>
+        cxa
+    </string>
+    <!-- 忘记密码 -->
+    <string name="password_forget_title">忘记密码</string>
+    <!-- 重置密码 -->
+    <string name="password_reset_title">设置登录密码</string>
+    <string name="password_reset_phone_hintr">输入原来密码</string>
+    <string name="password_reset_phone_hint1">设置6–18位登录密码</string>
+    <string name="password_reset_phone_hint2">重新输入一次密码</string>
+    <string name="password_reset_input_error">两次密码输入不一致，请重新输入</string>
+    <string name="password_reset_success">密码重置成功</string>
+
+
+    <!-- 校验手机号 -->
+    <string name="phone_verify_title">手机号验证</string>
+    <string name="phone_verify_current_phone">当前手机号：%s</string>
+    <!-- 修改手机号 -->
+    <string name="phone_reset_title">修改手机号</string>
+    <string name="phone_reset_change_hint">下次登录请使用更换后的新手机号登录</string>
+    <string name="phone_reset_commit">立即绑定</string>
+    <string name="phone_reset_commit_succeed">绑定成功，下次登录请使用新手机号登录</string>
+    <!-- 个人资料 -->
+    <string name="personal_data_title">个人资料</string>
+    <string name="personal_data_head">头像</string>
+    <string name="personal_data_id">用户ID</string>
+    <string name="personal_data_name">昵称</string>
+    <string name="personal_data_name_hint">设置昵称</string>
+    <string name="personal_data_realname_hint">填写姓名</string>
+    <string name="personal_data_address">地区</string>
+    <string name="personal_data_address_hint">请选择</string>
+    <string name="personal_data_phone">手机号码</string>
+    <string name="personal_data_idcard">身份证号</string>
+    <string name="personal_data_phone_hint">立即绑定</string>
+
+    <!-- 浏览器 -->
+    <string name="web_title">网页加载中…</string>
+    <!-- 异常捕捉 -->
+
+    <string name="crash_error_hint">发生意外错误\n抱歉，给您带来不便</string>
+    <string name="crash_error_restart">重新启动</string>
+    <string name="crash_error_log">错误日志</string>
+    <string name="crash_error_details">错误详情</string>
+    <string name="crash_error_info">错误信息</string>
+    <string name="crash_copy_log">复制日志</string>
+    <string name="crash_close">关闭</string>
+
+    <!-- 图片选择 -->
+    <string name="photo_title">图片选择</string>
+    <string name="photo_all">所有图片</string>
+    <string name="photo_total">共 %d 张</string>
+    <string name="photo_max_hint">本次最多只能选择 %d 张图片</string>
+    <string name="photo_launch_fail">无法启动相机</string>
+    <string name="photo_picture_error">图片错误</string>
+
+
+    <!-- 康养苑 -->
+    <string name="kky_name">康养苑</string>
+    <string name="kky_companyinfo">
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;公司专注于开发可穿戴电子产品以实现监控中老年的身体数据指标相关指标（包括但不限于血压、心率、计步和定位等），从而现实为客户提供实时身体数据分析，预警，医疗救助，咨询等服务，立志成为中老年人群健康医疗服务提供的专业服务供应商。
+    </string>
+    <string name="kky_my_family">我的家人</string>
+    <string name="kky_my_device">我的设备</string>
+    <string name="kky_my_location">位置</string>
+    <string name="kky_my_health_service">健康服务</string>
+    <string name="kky_my_health_assess">健康评估</string>
+    <string name="kky_my_social_life">社交生活</string>
+    <string name="kky_my_health_course">健康课程</string>
+    <string name="kky_my_medical_service">医疗服务</string>
+    <string name="kky_my_health_advice">健康播报</string>
+
+    <string name="kky_my_social_hotvideo">热门视频</string>
+
+
+    <string name="kky_message">消息通知</string>
+    <string name="kky_alldevices">全部设备</string>
+
+    <string name="kky_more">更多</string>
+    <string name="kky_change">换一换</string>
+    <string name="kky_search">搜一搜</string>
+    <string name="kky_recommend_today">今日推荐</string>
+
+    <string name="kky_title">标题</string>
+    <string name="kky_details">详情信息</string>
+    <string name="kky_info">详情</string>
+    <string name="kky_edit">编辑</string>
+    <string name="kky_setting">设置</string>
+
+
+    <!--康养苑   我的设置-->
+    <string name="kky_unlogin">未登录</string>
+    <string name="kky_edit_personal_info">编辑个人信息</string>
+    <string name="kky_my_credit">我的积分</string>
+    <string name="kky_health_record">健康档案</string>
+    <string name="kky_my_service">我的服务</string>
+    <string name="kky_my_course">我的课程</string>
+    <string name="kky_my_message">我的资讯</string>
+    <string name="kky_contact_us">联系我们</string>
+    <string name="kky_company_profile">公司介绍</string>
+
+    <string name="kky_about_customer_service_phone">客服电话</string>
+    <string name="kky_about_enterprise_wechat">企业微信</string>
+    <string name="kky_about_enterprise_email">企业邮箱</string>
+    <string name="kky_about_customer_service_online">在线客服</string>
+    <string name="kky_about_copyright">© %1$s kangyangyuan All rights reserved.</string>
+
+
+    <string name="kky_password_change">修改密码</string>
+    <string name="kky_user_phone">手机号码</string>
+
+    <string name="kky_bind_wechat">绑定微信</string>
+    <string name="kky_unbind_wechat">解绑</string>
+    <string name="kky_unbind_wechat_confirm">确定要从当前账号中解绑微信</string>
+
+    <string name="kky_user_advice">使用反馈</string>
+    <string name="kky_user_advice_content">请尽可能详细地叙述您遇到的问题，我们会尽快解决</string>
+    <string name="kky_user_contactway">联系方式</string>
+    <string name="kky_user_dayrecordupdate">上传日志帮助我们定位问题</string>
+
+    <string name="kky_setting_about">关于</string>
+    <string name="kky_version_info">版本信息</string>
+    <string name="kky_version_check">检查更新</string>
+    <string name="kky_version_checkcop">已是最新版本</string>
+    <string name="kky_privacy_policy">隐私政策</string>
+    <string name="kky_user_agreement">用户使用协议</string>
+
+    <string name="kky_user_advice_attach">您的意见是我们进步的动力</string>
+    <string name="kky_about">关于</string>
+
+    <string name="kky_account_safe">账户安全</string>
+    <string name="kky_log_off">注销当前账号</string>
+
+    <string name="kky_log_out">退出登录</string>
+
+    <string name="kky_save">保存</string>
+
+    <string name="kky_connect_tips">网络未连接，请连接网络</string>
+
+
+    <!--康养苑   个人信息-->
+    <string name="kky_personal_info">个人信息</string>
+    <string name="kky_headicon">头像</string>
+    <string name="kky_username">昵称</string>
+    <string name="kky_sex">性别</string>
+    <string name="kky_sex_n">保密</string>
+    <string name="kky_sex_m">男</string>
+    <string name="kky_sex_w">女</string>
+
+    <string name="kky_user_birth">出生日期</string>
+    <string name="kky_user_address">地区</string>
+    <string name="kky_user_height">身高</string>
+    <string name="kky_user_weight">体重</string>
+    <string name="kky_user_married">婚姻状况</string>
+    <string name="kky_user_smoking">吸烟状况</string>
+    <string name="kky_user_drinking">饮酒状况</string>
+    <string name="kky_user_illness">既往病史</string>
+    <string name="kky_user_realname">真实姓名</string>
+    <string name="kky_user_residenceaddress">居住地址</string>
+
+
+    <!--康养苑   我的积分-->
+    <string name="kky_exchange_record">兑换记录</string>
+    <string name="kky_exchange_credit">积分兑换</string>
+    <string name="kky_rookie_mission">新手任务</string>
+    <string name="kky_daily_mission">每日任务</string>
+
+
+    <!--康养苑   我的设备-->
+    <string name="kky_recently_used">最近使用</string>
+
+    <string name="kky_device_watched">健康监测</string>
+    <string name="kky_device_mouth">口腔健康</string>
+    <string name="kky_device_sleep">追梦睡眠</string>
+    <string name="kky_device_baby">爱心母婴</string>
+    <string name="kky_device_sport">活力运动</string>
+    <string name="kky_device_healthcare">养生保健</string>
+
+
+    <string name="kky_mydevice_watch">手表</string>
+    <string name="kky_mydevice_weight">体脂秤</string>
+    <string name="kky_mydevice_heart">血压计</string>
+    <string name="kky_mydevice_sleep">睡眠仪</string>
+    <string name="kky_mydevice_device1">健康智能手环</string>
+    <string name="kky_mydevice_device2">吸氧机</string>
+    <string name="kky_mydevice_device3">理疗仪</string>
+    <string name="kky_mydevice_device4">按摩仪</string>
+    <string name="kky_mydevice_more">更多</string>
+
+
+    <!--康养苑   健康数据-->
+    <string name="kky_titile_mydatahealth">健康数据</string>
+    <string name="kky_dh_mytitle">项目</string>
+    <string name="kky_dh_from">来源：</string>
+    <string name="kky_data_show">数值:(单位)</string>
+    <string name="kky_record_time">您还未及记录过数据哦，快去记录吧~</string>
+
+    <string name="kky_mydata_title">我的应用数据</string>
+    <string name="kky_mydata_applied">已开启的应用</string>
+    <string name="kky_mydata_unapplied">未开启的应用</string>
+    <string name="kky_mydata_applied_edit">按住拖动可调整顺序</string>
+
+
+    <!--康养元 健康课程-->
+    <string name="kky_healthcourse_1">孕婴</string>
+    <string name="kky_healthcourse_2">中医</string>
+    <string name="kky_healthcourse_3">运动康复</string>
+    <string name="kky_healthcourse_4">养生</string>
+    <string name="kky_healthcourse_5">慢性病</string>
+    <string name="kky_healthcourse_6">心理</string>
+    <string name="kky_healthcourse_7">更多</string>
+
+
+    <!--康养缘  健康服务-->
+    <string name="kky_healthservice_1">读心小I</string>
+    <string name="kky_healthservice_2">AI测肤</string>
+    <string name="kky_healthservice_3">医生电话资讯</string>
+    <string name="kky_healthservice_4">CBTI认知行为助眠</string>
+    <string name="kky_healthservice_5">呼吸训练降压</string>
+
+    <!--康养苑  医疗服务-->
+    <string name="kky_medicalservice_1">基因检测</string>
+    <string name="kky_medicalservice_detail_1">选择症状/回答提问/完成预诊</string>
+    <string name="kky_medicalservice_2">体检服务</string>
+    <string name="kky_medicalservice_detail_2">体检预约结果查询</string>
+    <string name="kky_medicalservice_3">在线问诊</string>
+    <string name="kky_medicalservice_detail_3">连接医生诊疗健康</string>
+    <string name="kky_medicalservice_4">康养就医</string>
+    <string name="kky_medicalservice_detail_4">数字医院快速通道</string>
+    <string name="kky_medicalservice_5">预约挂号</string>
+    <string name="kky_medicalservice_detail_5">优质号源专家门诊</string>
+
+
+    <!--康养苑  社交生活-->
+    <string name="kky_sociallife_0">视频</string>
+    <string name="kky_sociallife_1">直播</string>
+    <string name="kky_sociallife_2">组局</string>
+    <string name="kky_sociallife_3">互助</string>
+    <string name="kky_sociallife_4">聊天</string>
+    <string name="kky_sociallife_5">论坛</string>
+    <string name="kky_sociallife_6">专家门诊</string>
+
+    <string name="kyy_sociallife_7">长者管理</string>
+    <string name="kyy_sociallife_8">居家服务项</string>
+    <string name="kyy_sociallife_9">餐饮服务项</string>
+    <string name="kyy_sociallife_10">订单管理</string>
+    <string name="kyy_sociallife_11">我的工单</string>
+    <string name="kyy_sociallife_12">回访单管理</string>
+    <string name="kyy_sociallife_13">长者健康管理</string>
+
+
+    <string name="kyy_social_acceptOrder">接单</string>
+    <string name="kyy_social_sentOrder">派单</string>
+    <string name="kyy_social_modify">修改</string>
+    <string name="kyy_social_delete">作废</string>
+    <string name="kyy_social_begin">开工</string>
+    <string name="kyy_social_end">完工</string>
+    <string name="kyy_social_visit">回访</string>
+
+
+    <!--康养苑 商城模块-->
+    <string name="kky_shop_bottomnav_home">首页</string>
+    <string name="kky_shop_bottomnav_goods">商品</string>
+    <string name="kky_shop_bottomnav_lesson">课程</string>
+    <string name="kky_shop_bottomnav_cart">购物车</string>
+    <string name="kky_shop_bottomnav_mine">我的</string>
+
+
+    <!--康养苑 通用 -->
+    <string name="kky_loadfalse">数据加载失败</string>
+    <string name="kky_loadsuccess">数据加载完成</string>
+
+    <string name="kyy_content_isempty">填写内容不能为空</string>
+    <string name="kky_savesure">请确认保存</string>
+    <string name="kky_savesure_fail">保存失败！请重试</string>
+    <string name="kky_savesure_success">保存成功！</string>
+
+    <!--康养苑  设备： 手环 -->
+    <string name="kky_device_watch_wechat">微聊</string>
+    <string name="kky_device_watch_call">通话</string>
+    <string name="kky_device_watch_phonebook">电话本</string>
+    <string name="kky_device_watch_medicine">吃药提醒</string>
+    <string name="kky_device_watch_locate">当前位置</string>
+    <string name="kky_device_watch_locatetime">更新时间</string>
+    <string name="kky_device_watch_nodata">暂无数据</string>
+    <string name="kky_device_watch_viewinfo">查看详情</string>
+    <string name="kky_device_watch_stepnum">步数</string>
+    <string name="kky_device_watch_heartrate">心率</string>
+    <string name="kky_device_watch_sleep">睡眠</string>
+    <string name="kky_device_watch_bloodpressure">血压</string>
+    <string name="kky_device_watch_home">主页</string>
+    <string name="kky_device_watch_health">健康</string>
+    <string name="kky_device_watch_location">定位</string>
+    <string name="kky_device_watch_mine">我的</string>
+    <string name="kky_device_watch_find">发现</string>
+
+    <string name="kyy_workorder_elderman">被服务人员</string>
+    <string name="kyy_workorder_type">工单类型</string>
+    <string name="kyy_workorder_servicetype">服务项种类</string>
+    <string name="kyy_workorder_servicepricetype">收费类型</string>
+    <string name="kyy_workorder_servicename">服务项名称</string>
+    <string name="kyy_workorder_city">城市</string>
+    <string name="kyy_workorder_address">地址：</string>
+    <string name="kyy_workorder_des">描述：</string>
+    <string name="kyy_workorder_submit">提交</string>
+    <string name="kyy_workorder_add">添加</string>
+    <string name="kyy_workorder_assignedtype">分配类型</string>
+    <string name="kyy_workorder_assignedtarget">分配方</string>
+
+
+    <string name="kyy_visitorder_workorderid">工单号</string>
+    <string name="kyy_visitorder_servicename">服务项</string>
+    <string name="kyy_visitorder_creatman">回访人员</string>
+    <string name="kyy_visitorder_creattime">创建时间</string>
+
+
+    <string name="kyy_elder_name">姓名:</string>
+    <string name="kyy_elder_idcard">身份证:</string>
+    <string name="kyy_elder_birth">生日:</string>
+    <string name="kyy_elder_sex">性别:</string>
+    <string name="kyy_elder_mobile">联系电话:</string>
+    <string name="kyy_elder_address">现居地址：</string>
+    <string name="kyy_elder_address_res">户籍地址：</string>
+    <string name="kyy_elder_remarks">备注：</string>
+
+    <string name="kyy_elderhealth_name">长者：</string>
+    <string name="kyy_elderhealth_weight">体重：</string>
+    <string name="kyy_elderhealth_height">身高：</string>
+    <string name="kyy_elderhealth_des">描述信息：</string>
+
+    <string name="kyy_serviceitem_name">服务项名称：</string>
+    <string name="kyy_serviceitem_type">收费类型：</string>
+    <string name="kyy_serviceitem_cycle">周期（次数）：</string>
+    <string name="kyy_serviceitem_price">价格(￥)：</string>
+    <string name="kyy_serviceitem_content">服务内容：</string>
+
+    <string name="kyy_elder_family">家庭成员</string>
+    <string name="kyy_elder_service">服务项目</string>
+    <string name="kyy_elder_familyinfo">家庭信息</string>
+    <string name="kyy_elder_family_address">住址：</string>
+
+    <string name="kyy_elder_family_fill_name">姓名</string>
+    <string name="kyy_elder_family_fill_sex">性别</string>
+    <string name="kyy_elder_family_fill_relationship">与长者关系</string>
+    <string name="kyy_elder_family_fill_mobile">联系电话</string>
+    <string name="kyy_elder_family_fill_address">住址</string>
+    <string name="kyy_elder_family_fill_eldertitle">称谓</string>
+    <string name="kyy_elder_family_fill_familycount">人数</string>
+    <string name="kyy_elder_family_fill_appellation">身份</string>
+
+    <!--================================= xui string ==============================-->
+    <!--默认字体路径-->
+    <string name="default_app_font_path"></string>
+
+    <string name="xui_tip_expand">展开</string>
+    <string name="xui_tip_shrink">收缩</string>
+
+    <string name="xui_met_input_error">输入不符合要求!</string>
+    <string name="xui_met_not_allow_empty">输入不能为空!</string>
+
+    <!--Button-->
+    <string name="xui_lab_button_submit">确 定</string>
+    <string name="xui_lab_button_cancel">取 消</string>
+    <string name="xui_lab_button_reset">重 置</string>
+
+    <!--StateLayout-->
+    <string name="xui_tip_error_message">出错了，请稍后重试</string>
+    <string name="xui_tip_loading_message">数据加载中…</string>
+    <string name="xui_tip_empty_message">暂无数据</string>
+    <string name="xui_tip_no_network">请检查您的网络连接</string>
+    <string name="xui_tip_retry">重试</string>
+
+    <!--StatefulLayout-->
+    <string name="stfErrorMessage">@string/xui_tip_error_message</string>
+    <string name="stfOfflineMessage">@string/xui_tip_no_network</string>
+    <string name="stfEmptyMessage">@string/xui_tip_empty_message</string>
+    <string name="stfLoadingMessage">@string/xui_tip_loading_message</string>
+    <string name="stfRetryButtonText">@string/xui_tip_retry</string>
+    <string name="stfLocationOffMessage">请打开定位</string>
+    <string name="stf_retry">轻触屏幕重试</string>
+
+    <string name="xui_preview_video_path_error">资源加载失败</string>
+    <string name="xui_preview_play_failed">播放失败</string>
+    <string name="xui_preview_count_string">%1$d/%2$d</string>
+
+    <string name="xui_try_immediately">立即体验</string>
+    <string name="xui_jump">跳过</string>
+
+    <!--PickerView-->
+    <string name="xui_picker_view_cancel">取消</string>
+    <string name="xui_picker_view_submit">确定</string>
+    <string name="xui_picker_view_year">年</string>
+    <string name="xui_picker_view_month">月</string>
+    <string name="xui_picker_view_day">日</string>
+    <string name="xui_picker_view_hours">时</string>
+    <string name="xui_picker_view_minutes">分</string>
+    <string name="xui_picker_view_seconds">秒</string>
+
+    <!--MaterialSearchView-->
+    <string name="xui_search_hint">Search</string>
+    <string name="xui_tip_no_recognize_speech">当前设备不支持语音输入！</string>
+
+    <!--Behavior-->
+    <string name="xui_float_behavior">com.xuexiang.xui.widget.behavior.FloatingActionButtonBehavior</string>
+    <string name="xui_bottom_behavior">com.xuexiang.xui.widget.behavior.BottomNavigationViewBehavior</string>
+    <string name="xui_title_behavior">com.xuexiang.xui.widget.behavior.ToolBarBehavior</string>
+
+    <string name="xui_count_down_finish">重新获取</string>
+
+
+    <!--华文行楷字体路径，其实可以不设置-->
+    <!--<string name="default_app_font_path">fonts/hwxk.ttf</string>-->
+
+    <string name="style_default">默认样式</string>
+    <string name="style_md_ios">Material Design &#038; iOS Style</string>
+
+    <string name="lab_please_select">请选择</string>
+    <string name="tip_number_only_error_message">数字必须大于0小于100!</string>
+    <string name="regexp_number_only">^[1-9]?\\d$</string>
+    <string name="tip_phone_number_error">Invalid mobile number！</string>
+    <string name="regex_phone_number">^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(16[6])|(17[0,1,3,5-8])|(18[0-9])|(19[8,9]))\\d{8}$</string>
+
+    <string name="common_example">示例图片</string>
+
+    <string name="about_item_homepage">访问官网</string>
+    <string name="about_item_wiki">说明文档</string>
+    <string name="about_item_update">版本更新</string>
+    <string name="about_item_github">GitHub主页</string>
+    <string name="about_copyright">© %1$s xuexiangjys All rights reserved.</string>
+
+    <!--ExpandableTextView-->
+    <string name="etv_content_demo1">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</string>
+
+    <!--ShadowButton-->
+    <string name="t5">RippleShadowShadowButton\n
+                app:sb_ripple_color=\"#eeeeee\"\n
+                app:sb_ripple_duration=\"500\"\n
+                app:sb_shape_type=\"round\"\n
+                app:sb_color_unpressed=\"#f44336\"\n
+    </string>
+    <string name="t4">RippleShadowShadowButton\n
+                app:sb_ripple_color=\"#8a87ee\"\n
+                app:sb_ripple_duration=\"500\"\n
+                app:sb_shape_type=\"rectangle\"\n
+                app:sb_color_unpressed=\"#f44336\"</string>
+    <string name="t3">ShadowImageView\n
+                app:sb_shape_type=\"round\"</string>
+    <string name="t2">ShadowButton\n
+                app:sb_shape_type=\"round\"</string>
+    <string name="t1">ShadowButton\n
+                app:sb_radius=\"6dp\"</string>
+    <string name="t0">ShadowButton\n
+                app:sb_alpha_pressed=\"40\"\n
+                app:sb_color_pressed=\"#0303ff\"\n
+                app:sb_color_unpressed=\"#8aacee\"</string>
+
+    <!--MaterialDialog-->
+    <string name="tip_bluetooth_permission">是否允许打开蓝牙？</string>
+    <string name="lab_yes">是</string>
+    <string name="lab_no">否</string>
+    <string name="tip_infos">提示</string>
+    <string name="content_simple_confirm_dialog">请注意，这是一个简单的提示性对话框！</string>
+    <string name="lab_submit">确定</string>
+    <string name="tip_warning">警告</string>
+    <string name="content_warning">当前为开发环境，是否切换到真实环境？</string>
+    <string name="lab_change">切换</string>
+    <string name="lab_continue">继续</string>
+    <string name="hint_please_input_password">请输入密码</string>
+    <string name="tip_options">选项</string>
+    <string name="tip_router_setting">路线设置</string>
+    <string name="lab_choice">选择</string>
+    <string name="tip_update">版本更新</string>
+    <string name="content_downloading">正在下载中，请稍后...</string>
+    <string name="tip_download_finished">下载完毕!</string>
+    <string name="lab_cancel">取消</string>
+    <string name="content_wait_for_receive_data">数据接收中，请稍后...</string>
+    <string name="lab_edit">编辑</string>
+    <string name="lab_add">添加</string>
+    <string name="lab_delete">删除</string>
+    <string name="lab_update">更新</string>
+    <string name="tip_please_select_transfer_type">选择一种切换方式</string>
+    <string name="tip_signature">签名</string>
+    <string name="lab_clear">清除</string>
+    <string name="tip_loading_message">正在加载数据...</string>
+    <string name="tip_start">开始</string>
+    <string name="tip_stop">停止</string>
+
+    <!--MaterialProgressBar-->
+    <string name="framework_implementation">Framework Implementation</string>
+    <string name="library_implementation">Library Implementation</string>
+    <string name="library_implementation_tinted">Library Implementation (Tinted)</string>
+    <string name="determinate_horizontal_progress">Determinate Horizontal ProgressBar</string>
+    <string name="indeterminate_horizontal_progress">Indeterminate Horizontal ProgressBar</string>
+    <string name="determinate_circular_progress">Determinate Circular ProgressBar</string>
+    <string name="indeterminate_circular_progress">Indeterminate Circular ProgressBar</string>
+    <string name="toolbar_progress">ProgressBar on Toolbar</string>
+    <string name="horizontal_progress_toolbar">Horizontal</string>
+    <string name="indeterminate_horizontal_progress_toolbar">Indeterminate Horizontal</string>
+    <string name="not_available"><i>(Not Available)</i></string>
+
+    <string name="determinate_circular_title">Determinate Circular Sample</string>
+    <string name="normal_progress">Normal Style</string>
+    <string name="normal_tinted_progress">Normal Style (Tinted)</string>
+    <string name="dynamic_progress">Dynamic Style</string>
+    <string name="dynamic_tinted_progress">Dynamic Style (Tinted)</string>
+
+    <string name="circularImageView_item_xml_circle_title">剪裁为圆形+边框+点击效果</string>
+    <string name="circularImageView_item_xml_oval_title">剪裁为椭圆形+边框+点击效果</string>
+    <string name="circularImageView_item_xml_round_rect_title">剪裁为圆角矩形+边框+点击效果</string>
+
+    <string name="circularImageView_modify_tip">可以通过右上角的按钮动态修改下图的效果</string>
+    <string name="circularImageView_modify_1">改变边框颜色与宽度</string>
+    <string name="circularImageView_modify_2">改变选中态边框颜色与宽度</string>
+    <string name="circularImageView_modify_3">改变选中态 Mask 的颜色（带透明度）</string>
+    <string name="circularImageView_modify_4">手工切换选中态</string>
+    <string name="circularImageView_modify_5">改变圆角大小</string>
+    <string name="circularImageView_modify_6">变为圆形</string>
+    <string name="circularImageView_modify_7">变为椭圆形</string>
+    <string name="circularImageView_modify_8">禁止使用touchSelect态</string>
+    <string name="circularImageView_modify_9">重置为初始态</string>
+
+    <string name="chart_toggle_values">显示/隐藏图表值</string>
+    <string name="chart_toggle_x_values">显示/隐藏X轴</string>
+    <string name="chart_toggle_y_values">显示/隐藏Y轴</string>
+    <string name="chart_animate_x">X轴动画</string>
+    <string name="chart_animate_y">Y轴动画</string>
+    <string name="chart_animate_xy">XY轴动画</string>
+    <string name="chart_save">图表保存</string>
+
+    <string name="chart_toggle_bar_borders">显示/隐藏边线</string>
+    <string name="chart_toggle_icons">显示/隐藏图标</string>
+    <string name="chart_toggle_percent">数值/百分比</string>
+    <string name="chart_toggle_hole">显示/隐藏中心圆</string>
+    <string name="chart_toggle_center_text">显示/隐藏中心文字</string>
+    <string name="chart_toggle_curved_slices">切换分割线样式</string>
+    <string name="chart_spin_animation">旋转动画</string>
+
+    <string name="chart_toggle_filled">切换区域填充</string>
+    <string name="chart_toggle_circles">显示/隐藏圆点</string>
+    <string name="chart_toggle_cubic">开启/关闭贝塞尔曲线</string>
+    <string name="chart_toggle_pinch_zoom">开启/关闭自由缩放手势</string>
+    <string name="chart_toggle_highlight">开启/关闭标记</string>
+
+    <string name="tab1">信息</string>
+    <string name="tab2">报告</string>
+    <string name="tab3">活动</string>
+    <string name="tab4">设置</string>
+
+    <!--PictureSelector-->
+    <string name="pick_photo">选择图片</string>
+    <string name="pick_video">选择视频</string>
+    <string name="pick_photo_gif">选择gif图片</string>
+    <string name="pick_photo_without_camera">选择图片（不带拍照按钮且点击不预览图片）</string>
+    <string name="pick_one_photo">选择单张图片</string>
+    <string name="multiple_pick_photo">多次进入PhotoPicker选择图片</string>
+
+    <!--下拉刷新-->
+    <string name="item_example_number_title">第%02d条数据</string>
+    <string name="item_example_number_abstract">这是测试的第%02d条数据</string>
+
+    <string name="item_style_theme_orange_abstract">更改为橙色主题颜色</string>
+    <string name="item_style_theme_red_abstract">更改为红色主题颜色</string>
+    <string name="item_style_theme_green_abstract">更改为绿色主题颜色</string>
+    <string name="item_style_theme_blue_abstract">更改为蓝色主题颜色</string>
+    <string name="item_style_content_translation_off">下拉的时候列表内容停留在原位不动</string>
+    <string name="item_style_content_translation_on">下拉的时候列表内容跟随向下偏移</string>
+    <string name="item_style_horizontal_drag_on">打开左右拖动效果</string>
+    <string name="item_style_horizontal_drag_off">关闭左右拖动效果</string>
+    <string name="item_style_spinner_scale">下拉的时候Header的高度跟随变大</string>
+    <string name="item_style_spinner_translation">下拉的时候Header的位置向下偏移</string>
+    <string name="item_style_spinner_behind">下拉的时候Header固定在背后</string>
+    <string name="item_style_spinner_update_on">开启显示上次更新功能</string>
+    <string name="item_style_spinner_update_off">关闭显示上次更新功能</string>
+    <string name="item_style_theme_default_abstract">更改为默认主题颜色</string>
+    <string name="item_style_load_more">上拉加载更多</string>
+    <string name="item_style_bezier_on">下拉的时候绘制贝塞尔曲线背景</string>
+    <string name="item_style_bezier_off">下拉的时候不绘制贝塞尔曲线背景</string>
+    <string name="item_style_app_bar_expand">展开AppBarLayout，变成可伸展头部的页面</string>
+    <string name="item_style_app_bar_collapse">折叠AppBarLayout，变成正常的列表页面</string>
+    <string name="item_style_store_house_english">跟换显示符号为英文</string>
+    <string name="item_style_store_house_chinese">跟换显示符号为中文</string>
+    <string name="item_style_store_house_icon">跟换显示符号为图标</string>
+    <string name="item_style_store_house_brand">跟换显示符号为商标</string>
+
+    <string name="item_head_style_bezier_circle">贝塞尔圆圈</string>
+    <string name="item_head_style_delivery">气球快递</string>
+    <string name="item_head_style_drop_box">掉落盒子</string>
+    <string name="item_head_style_fly_refresh">纸飞机</string>
+    <string name="item_head_style_fun_game_battle_city">战争城市</string>
+    <string name="item_head_style_fun_game_hit_block">打砖块</string>
+    <string name="item_head_style_phoenix">金色校园</string>
+    <string name="item_head_style_store_house">StoreHouse</string>
+    <string name="item_head_style_taurus">飞机起飞</string>
+    <string name="item_head_style_water_drop">小水滴</string>
+    <string name="item_head_style_wave_swipe">全屏水滴</string>
+
+    <!--CookieBar-->
+    <string name="cookie_title">这是一个标题</string>
+    <string name="cookie_message">这里是提示信息！这里是提示信息！这里是提示信息！这里是提示信息！这里是提示信息！</string>
+    <string name="cookie_action">点击一下</string>
+
+    <string name="tabSegment_mode_general">简单文字</string>
+    <string name="tabSegment_mode_bottom_indicator">文字 + 底部 indicator</string>
+    <string name="tabSegment_mode_top_indicator">文字 + 顶部 indicator</string>
+    <string name="tabSegment_mode_indicator_with_content">文字 + indicator 长度不要跟随内容长度</string>
+    <string name="tabSegment_mode_left_icon_and_auto_tint">文字 + icon(支持四个方向) + 自动着色选中态 icon</string>
+    <string name="tabSegment_mode_sign_count">显示红点</string>
+    <string name="tabSegment_mode_icon_change">选中态更换 icon</string>
+    <string name="tabSegment_mode_muti_color">不同 item，不同文字(icon)颜色</string>
+    <string name="tabSegment_mode_change_content_by_index">根据 index 更新 tab 文案</string>
+    <string name="tabSegment_mode_replace_tab_by_index">根据 index 完全替换 tab</string>
+
+
+    <string name="connecting_text">连接中&#8230;</string>
+    <string name="connected_text">连接成功！</string>
+    <string name="connection_error_text">连接失败！</string>
+
+    <!-- Utils 系列界面 -->
+
+    <!-- Color Utils 颜色工具 -->
+    <string name="color_utils_alpha_title">设置颜色的 alpha 值</string>
+    <string name="color_utils_ratio_title">根据比例，在两个 color 值之间计算出一个 color 值</string>
+    <string name="color_utils_transform_title">将 color 颜色值转换为字符串</string>
+    <string name="color_utils_random_title">获取随机颜色</string>
+
+    <string name="color_utils_square_origin">原始</string>
+    <string name="color_utils_square_alpha">%1$.1f alpha</string>
+
+    <!-- DrawableUtils Drawable 工具 -->
+    <string name="drawable_utils_create_from_view_title">从一个 View 创建 Bitmap</string>
+    <string name="drawable_utils_create_from_view_button">以本界面 Root View 为例</string>
+    <string name="drawable_utils_solid_image_title">创建一张指定大小的纯色图片，支持圆角</string>
+    <string name="drawable_utils_circle_gradient_title">创建一张渐变图片，支持圆角</string>
+    <string name="drawable_utils_tint_color_title">设置 Drawable 的颜色</string>
+    <string name="drawable_utils_separator_title">创建带上分隔线或下分隔线的 Drawable</string>
+    <string name="lab_logout_confirm">是否确认退出？</string>
+    <string name="lab_open_third_app">是否允许页面打开第三方应用?</string>
+
+
+    <string name="error_message">This is an error toast.</string>
+    <string name="success_message">Success!</string>
+    <string name="info_message">Here is some info for you.</string>
+    <string name="warning_message">Beware of the dog.</string>
+    <string name="normal_message_without_icon">Normal toast w/o icon</string>
+    <string name="normal_message_with_icon">Normal toast w/ icon</string>
+
+    <string name="ratingbar_title">RatingBar</string>
+    <string name="scale_ratingbar_title">ScaleRatingBar</string>
+    <string name="rotation_ratingbar_title">RotationRatingBar</string>
+    <string name="add_rating_title">增加星级</string>
+    <string name="title_grade_class_select">班级选择</string>
+    <string name="title_sex_select">性别选择</string>
+
+    <string name="title_toolbar">主标题</string>
+    <string name="title_toolbar_sub">副标题</string>
+
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+
+    <string name="nav_download">下载</string>
+    <string name="nav_movie">电影</string>
+    <string name="nav_music">音乐</string>
+    <string name="nav_photo">照片</string>
+    <string name="nav_dashboard">资讯</string>
+    <string name="nav_settings">设置</string>
+    <string name="nav_about">关于</string>
+    <string name="nav_donate">捐赠</string>
+    <string name="nav_my_apps">我的应用</string>
+
+
+    <!-- Strings related to Settings -->
+    <string name="settings_category_basic">基本设置</string>
+    <string name="settings_category_advanced">高级设置</string>
+    <string name="settings_category_other">其他设置</string>
+    <string name="title_activity_settings">设置</string>
+    <string name="settings_switch_preference_title">Switch Preference</string>
+    <string name="settings_switch_preference_summary">Switch Preference 描述</string>
+    <string name="settings_check_box_preference_title">Check Box Preference</string>
+    <string name="settings_edit_text_preference_title">Edit Text Preference</string>
+    <string name="settings_edit_text_preference_default_value">Material Design</string>
+    <string name="settings_list_preference_dialog_title">List Preference</string>
+    <string name="settings_list_preference_title">List Preference</string>
+    <string name="settings_multi_select_list_preference_dialog_title">Multi Select List Preference</string>
+    <string name="settings_multi_select_list_preference_title">Multi Select List Preference</string>
+    <string name="settings_preference_click_title">OnPreferenceClickListener</string>
+    <string name="settings_preference_click_to_activity">点击跳转Activity</string>
+    <string name="pref_title_system_sync_settings">账户同步设置</string>
+    <string name="pref_title_new_message_notifications">消息通知</string>
+    <string name="pref_title_ringtone">铃声</string>
+    <string name="pref_ringtone_silent">静音</string>
+    <string name="pref_title_vibrate">震动</string>
+    <string name="pref_on_preference_click">onPreferenceClick</string>
+
+
+    <!-- String related to app short cuts -->
+    <string name="shortcut_label_setting">设置</string>
+    <string name="shortcut_label_search">搜索</string>
+    <string name="guide_key_sliding_root_navigation">guide_key_sliding_root_navigation</string>
+
+    <string name="camera_permission_confirmation">This app demonstrates the usage of CameraView. In order to do that, it needs permission to access camera.</string>
+    <string name="camera_permission_not_granted">Camera app cannot do anything without camera permission.</string>
+    <string name="picture_taken">Picture taken</string>
+    <string name="aspect_ratio">Aspect ratio</string>
+    <string name="switch_flash">Switch flash</string>
+    <string name="switch_camera">Switch camera</string>
+    <string name="flash_auto">Flash auto</string>
+    <string name="flash_off">Flash off</string>
+    <string name="flash_on">Flash on</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">设置</string>
+
+    <string name="nav_huaban">花瓣</string>
+    <string name="nav_unsplash">unsplash</string>
+
+    <string name="footer_load_tips">加载中…</string>
+    <string name="footer_failed_tips">加载失败，请重试</string>
+    <string name="footer_end_tips">--end--</string>
+
+    <string name="my_channel">我的频道</string>
+    <string name="other_channel">其他频道</string>
+    <string name="my_channel_tips">点击删除,拖拽排序</string>
+    <string name="other_channel_tips">点击添加到我的频道</string>
+    <string name="add">添加</string>
+    <string name="finish">完成</string>
+
+    <string name="setting">设置</string>
+
+    <string name="collect_path">收藏路径</string>
+    <string name="not_set">未设置</string>
+
+    <string name="select_path">选择目录</string>
+    <string name="last_level">上一级</string>
+    <string name="select">选中</string>
+
+    <string name="item"> %s 项</string>
+    <string name="check_tips">请选勾选路径</string>
+    <string name="show_hidden_files">显示隐藏目录</string>
+    <string name="hidden_files">不显示隐藏目录</string>
+    <string name="add_folder">添加文件夹</string>
+    <string name="download">下载</string>
+    <string name="downloaded">已下载</string>
+    <string name="detail">详情</string>
+    <string name="connect_tips">网络未连接，请连接网络</string>
+    <string name="connect_tips2">网络已连接，请等候</string>
+
+    <string name="back">返回</string>
+
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="permission_confirm">权限确认</string>
+    <string name="storage_permission_request">此操作需要授权访问存储的权限</string>
+</resources>
