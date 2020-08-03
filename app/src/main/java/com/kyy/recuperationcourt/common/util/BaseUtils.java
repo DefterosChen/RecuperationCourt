@@ -13,6 +13,7 @@ import android.os.SystemClock;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.text.format.Formatter;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import java.io.File;
@@ -305,6 +306,8 @@ public class BaseUtils {
 
 
     }
+
+
 
 
 }

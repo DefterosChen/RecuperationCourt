@@ -1,54 +1,38 @@
 package com.kyy.recuperationcourt.common.view.fragment.social.serviceitem;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import com.google.gson.Gson;
 import com.kyy.recuperationcourt.R;
 import com.kyy.recuperationcourt.common.base.server.ServiceCall;
 import com.kyy.recuperationcourt.common.model.constant.Consts;
 import com.kyy.recuperationcourt.common.model.constant.Messages;
-import com.kyy.recuperationcourt.common.model.constant.elder.ElderHealthConsts;
-import com.kyy.recuperationcourt.common.model.constant.serviceitem.ServiceItemCategory;
 import com.kyy.recuperationcourt.common.model.constant.serviceitem.ServiceItemConst;
 import com.kyy.recuperationcourt.common.model.constant.serviceitem.ServiceItemType;
 import com.kyy.recuperationcourt.common.model.entity.RequestObject;
-import com.kyy.recuperationcourt.common.model.entity.elder.UserElder;
 import com.kyy.recuperationcourt.common.model.entity.order.ServiceItem;
 import com.kyy.recuperationcourt.common.other.widget.dialog.BaseDialog;
 import com.kyy.recuperationcourt.common.other.widget.dialog.InputDialog;
 import com.kyy.recuperationcourt.common.util.BaseUtils;
+import com.kyy.recuperationcourt.common.util.MathUtils;
 import com.kyy.recuperationcourt.common.util.ToastUtil;
 import com.kyy.recuperationcourt.common.view.base.MyBaseFragment;
 import com.xuexiang.xpage.annotation.Page;
 import com.xuexiang.xpage.enums.CoreAnim;
-import com.xuexiang.xui.utils.ResUtils;
 import com.xuexiang.xui.widget.edittext.MultiLineEditText;
 import com.xuexiang.xui.widget.picker.widget.OptionsPickerView;
-import com.xuexiang.xui.widget.picker.widget.TimePickerView;
 import com.xuexiang.xui.widget.picker.widget.builder.OptionsPickerBuilder;
-import com.xuexiang.xui.widget.picker.widget.builder.TimePickerBuilder;
 import com.xuexiang.xui.widget.picker.widget.listener.OnOptionsSelectListener;
-import com.xuexiang.xui.widget.picker.widget.listener.OnTimeSelectChangeListener;
-import com.xuexiang.xui.widget.picker.widget.listener.OnTimeSelectListener;
 import com.xuexiang.xui.widget.textview.supertextview.SuperTextView;
-import com.xuexiang.xutil.data.DateUtils;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
@@ -364,6 +348,7 @@ public class AddServiceItemFragment extends MyBaseFragment {
 
                             @Override
                             public void onConfirm(BaseDialog dialog, String content) {
+
                                 if (!sTvCycle.getRightString().equals(content)) {
                                     sTvCycle.setRightString(content);
                                     serviceItem.setCycle(Integer.valueOf(content));
@@ -376,7 +361,6 @@ public class AddServiceItemFragment extends MyBaseFragment {
                             @Override
                             public void onCancel(BaseDialog dialog) {
                                 BaseUtils.hideKeyboard(getActivity());
-
                             }
                         })
                         .show();
@@ -390,29 +374,31 @@ public class AddServiceItemFragment extends MyBaseFragment {
                         // 标题可以不用填写
                         .setTitle(getString(R.string.kyy_serviceitem_price))
                         .setContent(sTvPrice.getRightString())
-                        //.setHint(getString(R.string.personal_data_name_hint))
-                        //.setConfirm("确定")
-                        // 设置 null 表示不显示取消按钮
-                        //.setCancel("取消")
-                        // 设置点击按钮后不关闭对话框
-                        //.setAutoDismiss(false)
+                        .setAutoDismiss(false)
                         .setListener(new InputDialog.OnListener() {
 
                             @Override
                             public void onConfirm(BaseDialog dialog, String content) {
+
+                                if(!MathUtils.isNumeric(content)){
+                                    ToastUtil.showTips("请输入正确的数字");
+                                    return;
+                                }
+
                                 if (!sTvPrice.getRightString().equals(content)) {
                                     sTvPrice.setRightString(content);
                                     serviceItem.setPrice(Integer.valueOf(content));
                                 }
 
-                                BaseUtils.hideKeyboard(getActivity());
+
+                                dialog.dismiss();
 
                             }
 
                             @Override
                             public void onCancel(BaseDialog dialog) {
                                 BaseUtils.hideKeyboard(getActivity());
-
+                                dialog.dismiss();
                             }
                         })
                         .show();

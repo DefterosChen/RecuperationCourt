@@ -237,7 +237,6 @@ public class AddWorkOrderFragment extends MyBaseFragment {
     protected void initListeners() {
         super.initListeners();
 
-
         //提交新增工单数据
         mTvSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -456,7 +455,6 @@ public class AddWorkOrderFragment extends MyBaseFragment {
                         String tx = options1Items.get(options1).getPickerViewText() + "-" +
                                 options2Items.get(options1).get(options2) + "-" +
                                 options3Items.get(options1).get(options2).get(options3);
-
 
                         workOrder.setProvince(options1Items.get(options1).getPickerViewText());
                         workOrder.setCity(options2Items.get(options1).get(options2));

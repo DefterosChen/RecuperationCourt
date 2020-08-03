@@ -808,11 +808,7 @@ public class MyWorkOrderFragment extends MyBaseFragment implements SmartViewHold
                                         }
                                     }
                                 });
-
-
                             }
-
-
                         })
                         .show();
             }
