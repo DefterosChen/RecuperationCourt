@@ -23,7 +23,6 @@ import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
-import com.squareup.leakcanary.LeakCanary;
 import com.xuexiang.xpage.AppPageConfig;
 import com.xuexiang.xpage.PageConfig;
 import com.xuexiang.xpage.PageConfiguration;
@@ -171,12 +170,12 @@ public final class MyApplication extends Application {
     public static void initSDK(Application application) {
         // 这个过程专门用于堆分析的 leak 金丝雀
         // 你不应该在这个过程中初始化你的应用程序
-        if (LeakCanary.isInAnalyzerProcess(application)) {
-            return;
-        }
-
-        // 内存泄漏检测
-        LeakCanary.install(application);
+//        if (LeakCanary.isInAnalyzerProcess(application)) {
+//            return;
+//        }
+//
+//        // 内存泄漏检测
+//        LeakCanary.install(application);
 
 //        // 友盟统计、登录、分享 SDK
 //        UmengClient.init(application);
