@@ -56,6 +56,7 @@ import butterknife.BindView;
 public class SocialFragment extends MyBaseFragment {
     public final static String FRAGMENT_NAME = "SocialFragment";
 
+
     protected String TAG = this.getClass().getSimpleName();
 
     @BindView(R.id.stv_sociallife0)
@@ -70,10 +71,6 @@ public class SocialFragment extends MyBaseFragment {
     SuperTextView superTextView_s4;
     @BindView(R.id.stv_sociallife5)
     SuperTextView superTextView_s5;
-    @BindView(R.id.stv_sociallife6)
-    SuperTextView superTextView_s6;
-    @BindView(R.id.stv_sociallife7)
-    SuperTextView superTextView_s7;
 
     @BindView(R.id.videoView)
     VideoView videoView;
@@ -93,9 +90,41 @@ public class SocialFragment extends MyBaseFragment {
 
     protected static final String ARG_CHANNEL = "channel";
 
+
+
     protected int mLastPage = 1;
     protected int mNextPage = 2;
     protected int mLoadingMode = MODE_REFRESH;
+
+    protected Channel mChannel;
+    private long mFragmentID;
+    protected Set<String> mIdSet;
+
+//    ArrayList<Integer> imageIds = new ArrayList<>();
+//    private int[] ids = {R.drawable.drop_pic_1
+//            , R.drawable.drop_pic_2
+//            , R.drawable.drop_pic_3
+//            , R.drawable.drop_pic_4
+//            , R.drawable.drop_pic_5
+//            , R.drawable.drop_pic_6
+//            , R.drawable.drop_pic_7
+//            , R.drawable.drop_pic_8
+//            , R.drawable.drop_pic_9
+//            , R.drawable.drop_pic_10
+//            , R.drawable.drop_pic_11
+//            , R.drawable.drop_pic_13
+//            , R.drawable.drop_pic_14
+//            , R.drawable.drop_pic_15
+//            , R.drawable.drop_pic_16
+//            , R.drawable.drop_pic_17
+//            , R.drawable.drop_pic_18
+//            , R.drawable.drop_pic_19
+//            , R.drawable.drop_pic_20
+//            ,};
+//
+//    private RecyclerView rv_waterfall;
+//    private DemoAdapter adapter;
+//    private SmartRefreshLayout refreshlayout;
 
 
     public SocialFragment() {
@@ -172,7 +201,7 @@ public class SocialFragment extends MyBaseFragment {
 
     protected void loadData() {
         if (NetWorkUtils.isNetworkConnected(getContext())) {
-            System.out.println("加载主题图片");
+
             new FetchPinsTask().host(this).execute();
         } else {
             ToastUtil.showTips(R.string.connect_tips);
@@ -192,7 +221,7 @@ public class SocialFragment extends MyBaseFragment {
         //        "pets", "宠物"
         //        "photography", "摄影"
         //        "apparel", "服装"
-        Channel channel = new Channel("beauty", ARG_CHANNEL);
+        Channel channel = new Channel("beauty", "channel");
 
         @Override
         protected void onPreExecute() {
@@ -275,85 +304,50 @@ public class SocialFragment extends MyBaseFragment {
         });
 
         /**
-         * 社交生活 ---- 长者管理
+         * 社交生活 ---- 直播
          */
         superTextView_s1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PageOption.to(ElderListFragment.class)
-                        .setRequestCode(100)
-                        .putString(Messages.FRAGMENTFROMWHERE,FRAGMENT_NAME)
-                        .open(SocialFragment.this);
+                openPage(VideoFragment.class);
             }
         });
         /**
-         * 社交生活 ---- 居家服务项
+         * 社交生活 ---- 组局
          */
         superTextView_s2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                PageOption.to(ServiceItemListFragment.class)
-                        .setRequestCode(100)
-                        .putString(Messages.FRAGMENTFROMWHERE,FRAGMENT_NAME)
-                        .putInt(ServiceItemConst.SERVICEITEM_CATEGORY, ServiceItemCategory.HOUSEKEEPING.getCode())
-                        .open(SocialFragment.this);
-
+                Utils.goWeb(getContext(), "https://www.ehuzhu.com/");
             }
         });
         /**
-         * 社交生活 ---- 餐饮服务项
+         * 社交生活 ---- 互助
          */
         superTextView_s3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                PageOption.to(ServiceItemListFragment.class)
-                        .setRequestCode(100)
-                        .putString(Messages.FRAGMENTFROMWHERE,FRAGMENT_NAME)
-                        .putInt(ServiceItemConst.SERVICEITEM_CATEGORY,ServiceItemCategory.RESTAURANT.getCode())
-                        .open(SocialFragment.this);
-            }
-        });
-        /**
-         * 社交生活 ---- 订单管理
-         */
-        superTextView_s4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openPage(WorkOrderFragment.class);
             }
         });
         /**
-         * 社交生活 ---- 我的工单
+         * 社交生活 ---- 聊天
+         */
+        superTextView_s4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Utils.goWeb(getContext(), "https://www.ehuzhu.com/");
+            }
+        });
+        /**
+         * 社交生活 ---- 论坛
          */
         superTextView_s5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPage(MyWorkOrderFragment.class);
+                Utils.goWeb(getContext(), "https://www.ehuzhu.com/");
             }
         });
-        /**
-         * 社交生活 ---- 回访单列表
-         */
-        superTextView_s6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openPage(VisitOrderFragment.class);
-            }
-        });
-        /**
-         * 社交生活 ---- 长者健康管理
-         */
-        superTextView_s7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openPage(ElderHealthListFragment.class);
-            }
-        });
-
-
-
 
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
